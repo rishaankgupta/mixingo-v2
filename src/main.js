@@ -39,6 +39,35 @@ if (menuButton && mobileNav) {
   window.addEventListener('keydown', (event) => event.key === 'Escape' && closeMenu());
 }
 
+/* ── Smart nav: hide on scroll-down, reveal on scroll-up ──────────────── */
+const smartNav = document.querySelector('.nav');
+if (smartNav) {
+  let lastY   = window.scrollY;
+  let ticking = false;
+
+  window.addEventListener('scroll', () => {
+    if (ticking) return;
+    ticking = true;
+    requestAnimationFrame(() => {
+      const y        = window.scrollY;
+      const navH     = smartNav.offsetHeight;
+      const menuOpen = document.body.classList.contains('menu-open');
+
+      if (!menuOpen) {
+        if (y < lastY) {
+          /* Any upward scroll → reveal immediately */
+          smartNav.classList.remove('nav-hidden');
+        } else if (y > lastY && y > navH) {
+          /* Downward scroll past nav height → hide */
+          smartNav.classList.add('nav-hidden');
+        }
+      }
+      lastY   = Math.max(0, y);
+      ticking = false;
+    });
+  }, { passive: true });
+}
+
 /* ── Pricing toggle ────────────────────────────────────────────────────── */
 document.querySelectorAll('.toggle button').forEach((button) => button.addEventListener('click', () => {
   document.querySelectorAll('.toggle button').forEach((item) => item.classList.remove('active'));
