@@ -213,7 +213,9 @@ a {
     display: none;
     background: 0;
     border: 0;
-    font-size: 22px
+    font-size: 22px;
+    position: relative;
+    z-index: 200   /* always above mobile-nav (z-index:150) within nav's stacking context */
 }
 
 .hero {
