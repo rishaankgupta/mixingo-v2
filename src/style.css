@@ -1572,7 +1572,7 @@ textarea[readonly] {
     border: 1px solid var(--line);
     border-radius: 50%;
     position: relative;
-    z-index: 30
+    z-index: 200
 }
 
 .menu span {
