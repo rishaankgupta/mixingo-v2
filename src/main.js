@@ -253,7 +253,7 @@ if (waitlistForm) {
       waitlistForm.querySelector('.form-success')?.focus();
     } catch (err) {
       console.error('Waitlist submission failed', err);
-      showError('Something went wrong — please try again or email hello@mixingo.app.');
+      showError('Something went wrong — please try again or email hello@mixingo.dev.');
     } finally {
       setLoading(false);
     }
