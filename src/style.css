@@ -21,6 +21,7 @@ html {
 
 body {
     margin: 0;
+    padding-top: 88px;
     background: var(--cream);
     color: var(--ink);
     font-family: Manrope, sans-serif;
@@ -64,25 +65,54 @@ a {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    position: sticky;
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
+    z-index: 200;
+    border-bottom: 1px solid transparent;
+    transition: transform .32s cubic-bezier(.4, 0, .2, 1),
+                border-color .3s ease
+}
+
+/* Override shell's width constraint so nav spans full viewport edge-to-edge */
+.nav.shell {
     width: 100%;
     max-width: 100%;
-    margin: 0 auto;
-    padding: 0 max(16px, calc(50% - 590px));
-    background: rgba(245, 241, 232, .97);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    z-index: 200;
-    border-bottom: 1px solid var(--line);
-    transition: transform .35s cubic-bezier(.4, 0, .2, 1);
+    margin: 0;
+    /* Center content within 1180px, same as shell, via padding */
+    padding: 0 max(24px, calc(50% - 590px));
     box-sizing: border-box
 }
 
-.nav-hidden {
-    transform: translateY(-110%)
+/* Full-width frosted background layer behind the shell-constrained content */
+.nav::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: transparent;
+    backdrop-filter: blur(0px);
+    -webkit-backdrop-filter: blur(0px);
+    transition: background .3s ease, backdrop-filter .3s ease,
+                box-shadow .3s ease;
+    z-index: -1
+}
+
+/* Scrolled state: solid background + subtle shadow */
+.nav.nav-scrolled::before {
+    background: rgba(245, 241, 232, .96);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 1px 24px rgba(16, 43, 37, .07)
+}
+
+.nav.nav-scrolled {
+    border-color: var(--line)
+}
+
+/* Hidden state: slide up */
+.nav.nav-hidden {
+    transform: translateY(-100%)
 }
 
 .brand {
@@ -1957,11 +1987,15 @@ textarea[readonly] {
     }
 
     .nav {
-        height: 68px;
-        padding: 0 16px;
-        width: 100%;
-        max-width: 100%;
-        margin: 0
+        height: 68px
+    }
+
+    .nav.shell {
+        padding: 0 16px
+    }
+
+    body {
+        padding-top: 68px
     }
 
     .hero {

@@ -39,32 +39,44 @@ if (menuButton && mobileNav) {
   window.addEventListener('keydown', (event) => event.key === 'Escape' && closeMenu());
 }
 
-/* ── Smart nav: hide on scroll-down, reveal on scroll-up ──────────────── */
-const smartNav = document.querySelector('.nav');
-if (smartNav) {
+/* ── Dynamic nav: transparent → solid → hide/reveal on scroll ─────────── */
+const dynNav = document.querySelector('.nav');
+if (dynNav) {
+  const SCROLL_THRESHOLD = 60;  // px before nav goes solid
   let lastY   = window.scrollY;
   let ticking = false;
+
+  const updateNav = () => {
+    const y        = window.scrollY;
+    const menuOpen = document.body.classList.contains('menu-open');
+
+    /* Solid/transparent state */
+    if (y > SCROLL_THRESHOLD) {
+      dynNav.classList.add('nav-scrolled');
+    } else {
+      dynNav.classList.remove('nav-scrolled', 'nav-hidden');
+    }
+
+    /* Hide/reveal on scroll direction (only when past threshold) */
+    if (!menuOpen && y > SCROLL_THRESHOLD) {
+      if (y < lastY) {
+        dynNav.classList.remove('nav-hidden');   /* scrolling up → show */
+      } else if (y > lastY + 4) {
+        dynNav.classList.add('nav-hidden');       /* scrolling down → hide */
+      }
+    }
+
+    lastY   = y;
+    ticking = false;
+  };
+
+  /* Run once on load to set correct initial state */
+  updateNav();
 
   window.addEventListener('scroll', () => {
     if (ticking) return;
     ticking = true;
-    requestAnimationFrame(() => {
-      const y        = window.scrollY;
-      const navH     = smartNav.offsetHeight;
-      const menuOpen = document.body.classList.contains('menu-open');
-
-      if (!menuOpen) {
-        if (y < lastY) {
-          /* Any upward scroll → reveal immediately */
-          smartNav.classList.remove('nav-hidden');
-        } else if (y > lastY && y > navH) {
-          /* Downward scroll past nav height → hide */
-          smartNav.classList.add('nav-hidden');
-        }
-      }
-      lastY   = Math.max(0, y);
-      ticking = false;
-    });
+    requestAnimationFrame(updateNav);
   }, { passive: true });
 }
 
