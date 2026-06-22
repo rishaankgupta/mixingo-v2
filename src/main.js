@@ -42,7 +42,7 @@ if (menuButton && mobileNav) {
 /* ── Dynamic nav: transparent → solid → hide/reveal on scroll ─────────── */
 const dynNav = document.querySelector('.nav');
 if (dynNav) {
-  const SCROLL_THRESHOLD = 60;  // px before nav goes solid
+  const SCROLL_THRESHOLD = 80;  // px before nav morphs from bar to pill
   let lastY   = window.scrollY;
   let ticking = false;
 

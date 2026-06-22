@@ -60,6 +60,7 @@ a {
     color: inherit
 }
 
+/* ── Navbar: simple bar at top → floating pill on scroll ──────────────── */
 .nav {
     height: 88px;
     display: flex;
@@ -70,50 +71,57 @@ a {
     left: 0;
     right: 0;
     z-index: 200;
-    border-bottom: 1px solid transparent;
-    transition: transform .32s cubic-bezier(.4, 0, .2, 1),
-                border-color .3s ease
+    border-radius: 0;
+    border: 1px solid var(--line);
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    background: var(--cream);
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    box-shadow: none;
+    padding: 0 22px;
+    box-sizing: border-box;
+    /* Animate all morph properties */
+    transition: top .42s cubic-bezier(.4, 0, .2, 1),
+                left .42s cubic-bezier(.4, 0, .2, 1),
+                right .42s cubic-bezier(.4, 0, .2, 1),
+                height .42s cubic-bezier(.4, 0, .2, 1),
+                border-radius .42s cubic-bezier(.4, 0, .2, 1),
+                background .35s ease,
+                backdrop-filter .35s ease,
+                box-shadow .35s ease,
+                border-color .35s ease,
+                transform .32s cubic-bezier(.4, 0, .2, 1)
 }
 
-/* Override shell's width constraint so nav spans full viewport edge-to-edge */
+/* Shell override: let left+right define width (works for both states) */
 .nav.shell {
-    width: 100%;
-    max-width: 100%;
-    margin: 0;
-    /* Center content within 1180px, same as shell, via padding */
-    padding: 0 max(24px, calc(50% - 590px));
-    box-sizing: border-box
+    width: auto;
+    max-width: none;
+    margin: 0
 }
 
-/* Full-width frosted background layer behind the shell-constrained content */
-.nav::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: transparent;
-    backdrop-filter: blur(0px);
-    -webkit-backdrop-filter: blur(0px);
-    transition: background .3s ease, backdrop-filter .3s ease,
-                box-shadow .3s ease;
-    z-index: -1
-}
-
-/* Scrolled state: solid background + subtle shadow */
-.nav.nav-scrolled::before {
-    background: rgba(245, 241, 232, .96);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    box-shadow: 0 1px 24px rgba(16, 43, 37, .07)
-}
-
+/* ── Scrolled: morph into floating pill ── */
 .nav.nav-scrolled {
-    border-color: var(--line)
+    height: 60px;
+    top: 16px;
+    left: max(16px, calc(50% - 550px));
+    right: max(16px, calc(50% - 550px));
+    border-radius: 14px;
+    border: 1px solid rgba(16, 43, 37, .12);
+    background: rgba(245, 241, 232, .88);
+    backdrop-filter: blur(18px) saturate(1.6);
+    -webkit-backdrop-filter: blur(18px) saturate(1.6);
+    box-shadow: 0 6px 30px rgba(16, 43, 37, .1),
+                inset 0 1px 0 rgba(255, 255, 255, .65)
 }
 
-/* Hidden state: slide up */
+/* ── Hidden: slide above viewport (clears pill's 16px top gap too) ── */
 .nav.nav-hidden {
-    transform: translateY(-100%)
+    transform: translateY(calc(-100% - 24px))
 }
+
 
 .brand {
     font-size: 22px;
@@ -1987,15 +1995,16 @@ textarea[readonly] {
     }
 
     .nav {
-        height: 68px
-    }
-
-    .nav.shell {
+        height: 52px;
+        top: 12px;
+        left: 12px;
+        right: 12px;
+        border-radius: 12px;
         padding: 0 16px
     }
 
     body {
-        padding-top: 68px
+        padding-top: 80px
     }
 
     .hero {
