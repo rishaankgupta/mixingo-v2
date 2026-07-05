@@ -5,14 +5,45 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description"
-    content="Mixingo is a code-mixed translation API and web translator for Hinglish, Spanglish, Taglish, Arabizi, Singlish and other hybrid language text." />
-  <title>Mixingo — Code-mixed translation API for hybrid languages</title>
+    content="Mixingo translates mixed-language text that Google gets wrong — Hinglish, Spanglish, Taglish, Arabizi. Free web translator and developer API." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://mixingo.dev/" />
+  <meta property="og:title" content="Mixingo — Translation for how people actually write" />
+  <meta property="og:description" content="The first translator built for mixed-language text. Hinglish, Spanglish, Taglish, Arabizi — translated naturally." />
+  <meta property="og:url" content="https://mixingo.dev/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Mixingo" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Mixingo — Translation for mixed-language text" />
+  <meta name="twitter:description" content="Google translates Hindi. DeepL translates English. Nobody translates Hinglish. Until Mixingo." />
+  <title>Mixingo — Translation for Hinglish, Spanglish, Taglish &amp; mixed-language text</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="/src/style.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Mixingo",
+    "url": "https://mixingo.dev",
+    "applicationCategory": "UtilitiesApplication",
+    "operatingSystem": "Web",
+    "description": "Translation API and web tool for code-mixed, multilingual text like Hinglish, Spanglish, Taglish, and Arabizi.",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "creator": {
+      "@type": "Organization",
+      "name": "Mixingo",
+      "url": "https://mixingo.dev"
+    }
+  }
+  </script>
 </head>
 
 <body>
@@ -35,14 +66,12 @@
     <section class="hero shell">
       <div class="orb orb-one"></div>
       <div class="orb orb-two"></div>
-      <div class="eyebrow reveal"><span></span> Private beta · First built-for-code-mix translation API</div>
-      <h1 class="reveal delay-1">Translate Hinglish, Spanglish & hybrid text<br><em>without flattening the mix.</em>
+      <div class="eyebrow reveal"><span></span> Private beta · The translator built for how the internet actually speaks</div>
+      <h1 class="reveal delay-1">Say it your way.<br><em>We'll translate it right.</em>
       </h1>
-      <p class="hero-copy reveal delay-2">Mixingo is a web translator and developer API for code-mixed language: slang,
-        transliteration, script switching and two-language sentences that generic tools often normalize into something
-        no one would actually say.</p>
+      <p class="hero-copy reveal delay-2">People write "kal milte hain?" and "¿puedo reschedule?" every day. Every translation tool turns it into something stiff, robotic, and wrong. Mixingo is built for those sentences — as a web translator anyone can use, and an API developers can ship.</p>
       <div class="hero-actions reveal delay-3"><a class="button primary" href="#waitlist">Get API early access
-          <span>↗</span></a><a class="watch" href="#product"><b>▶</b> See the failure generic tools miss</a></div>
+          <span>↗</span></a><a class="watch" href="#product"><b>▶</b> See the difference ↓</a></div>
       <div class="proof reveal delay-3">
         <div class="avatars"><span>हिं</span><span>Es</span><span>ع</span><span>Ta</span></div>
         <div><strong>Purpose-built for hybrid languages</strong><small>Hinglish, Spanglish, Taglish, Singlish, Arabizi,
@@ -98,12 +127,10 @@
     <section class="problem shell" id="product">
       <div class="section-label">01 — THE PROBLEM</div>
       <div class="problem-grid">
-        <h2>People don’t speak<br>in <span>textbooks.</span></h2>
+        <h2>Two billion people mix languages every day.<br><span>Every translator acts like they don't.</span></h2>
         <div>
-          <p>Your users do not submit clean textbook language. They write “kal refund milega?”, “¿puedo reschedule la
-            cita?”, “lah can ship today?” and expect software to understand intent, tone and script.</p>
-          <p class="muted">Most translators normalize the mess away.<br><strong>Mixingo preserves the meaning inside the
-              mix.</strong></p>
+          <p>Think about the last time you typed in two languages at once. You didn't stop to think about it — it just came out that way. Now paste that sentence into Google Translate. It comes back wrong. Stiff. Like it was written by someone who learned the language from a dictionary, not from life.</p>
+          <p class="muted">That's the gap Mixingo fills.<br><strong>We translate the way you actually write — not the way translators wish you did.</strong></p>
         </div>
       </div>
       <div class="compare-grid">
@@ -124,19 +151,16 @@
       </div>
       <div class="pain-grid">
         <article><span>01</span>
-          <h3>Support tickets lose intent</h3>
-          <p>A user writes Hinglish or Taglish because that is how they explain the problem. A literal translation can
-            miss urgency, politeness, sarcasm or the actual product issue.</p>
+          <h3>Support tickets lose the real meaning</h3>
+          <p>When someone writes "yaar urgent hai please dekho," they're panicking. A bad translation strips that out. Your support team reads "friend urgent please check" and doesn't escalate. That's a churn event.</p>
         </article>
         <article><span>02</span>
-          <h3>Chat products break on mixed scripts</h3>
-          <p>Romanized Hindi, Arabic chat spelling, Spanish-English switching and local slang arrive in the same thread.
-            Language detection alone is not enough.</p>
+          <h3>Mixed language breaks every chat tool</h3>
+          <p>Language detection tells you which language someone used. It doesn't tell you what they meant. Context is everything. Detection alone gives you nothing.</p>
         </article>
         <article><span>03</span>
-          <h3>Developers need an API, not a demo trick</h3>
-          <p>Apps need predictable JSON, streaming and non-streaming modes, script detection, usage limits and examples
-            that map to real product flows.</p>
+          <h3>Developers need something that ships</h3>
+          <p>Not a prompt you have to maintain. Not a translation model you have to fine-tune. One API call that returns predictable JSON, handles script switching, and doesn't break when your user types the way they actually think.</p>
         </article>
       </div>
     </section>
@@ -144,9 +168,8 @@
     <section class="features shell">
       <div class="section-label">02 — WHY MIXINGO</div>
       <div class="section-title">
-        <h2>Code-mix in.<br><em>Context</em> out.</h2>
-        <p>Translation designed around hybrid language pairs, anti-normalization and product integrations — not generic
-          multilingual marketing.</p>
+        <h2>Built for the sentence<br><em>Google translates wrong.</em></h2>
+        <p>Translation designed for mixed-language, informal, human text — the kind that breaks every other tool.</p>
       </div>
       <div class="feature-grid">
         <article class="feature feature-large">
@@ -162,9 +185,8 @@
           <div class="feature-visual tone">
             <div class="wave">▂▅▃▇▂▆▃▅▂</div><span>CASUAL</span><span>FRIENDLY</span><span>YOU</span>
           </div><span class="num">02</span>
-          <h3>Doesn’t over-normalize</h3>
-          <p>Mixingo keeps conversational intent and local phrasing instead of forcing every sentence into stiff
-            textbook English.</p>
+          <h3>Keeps it human</h3>
+          <p>"Arey yaar chillax kar" shouldn't come back as "Oh friend please relax." It should come back as "Relax, man." Mixingo preserves how something was said, not just what it said.</p>
         </article>
         <article class="feature">
           <div class="feature-visual script">
@@ -176,17 +198,19 @@
         </article>
         <article class="feature feature-wide" id="developers">
           <div><span class="num">04</span>
-            <h3>Built for developer revenue.</h3>
-            <p>Use one API for chat, support, marketplaces and communities with streaming, non-streaming, script
-              detection and account-level usage controls.</p><a href="developers.html">Explore docs preview
+            <h3>One API, ready to ship.</h3>
+            <p>Predictable JSON. Streaming for live chat. Non-streaming for batch jobs. Script detection baked in. Account-level usage controls. No prompt engineering required.</p><a href="developers.html">Explore docs preview
               <span>↗</span></a>
           </div>
           <pre><code><span>const</span> result = <span>await</span> mixingo.translate({
-  text: <i>"kal milte hain?"</i>,
-  to: <i>"en-natural"</i>
+  text: <i>"bhai kal urgent hai, boss ne bola ASAP reply karo"</i>,
+  target: <i>"en"</i>,
+  style: <i>"natural"</i>
 });
 
-<span class="comment">// “Want to meet tomorrow?”</span></code></pre>
+<span class="comment">// "Hey, there's an urgent meeting tomorrow —</span>
+<span class="comment">//  the boss wants a reply ASAP"</span>
+<span class="comment">// tone: urgent | detected: Hinglish</span></code></pre>
         </article>
       </div>
     </section>
@@ -195,7 +219,7 @@
       <div class="section-label">03 — HONEST COMPARISON</div>
       <div class="compare-intro">
         <div>
-          <h2>Different tools.<br><em>Different jobs.</em></h2>
+          <h2>Google is great.<br><em>For Hinglish at 2am? Not so much.</em></h2>
           <p>Google, DeepL and Azure are broad, powerful translation platforms. Mixingo is being built for a narrower
             problem they do not explicitly position around: naturally interpreting code-mixed, transliterated, informal
             text.</p>
@@ -249,16 +273,77 @@
           href="compare.html#sources">View methodology & sources →</a></p>
     </section>
 
+    <section class="live-compare shell">
+      <div class="section-label">SAME SENTENCE · FOUR TOOLS</div>
+      <h2>See the difference yourself.</h2>
+      <p>We took a real Hinglish sentence and ran it through Google Translate, DeepL, ChatGPT, and Mixingo. Here's what came back.</p>
+      <div class="live-compare-sentence">
+        <small>INPUT (HINGLISH)</small>
+        "bhai kal urgent meeting hai, boss ne bola ASAP reply karo nahi toh problem hoga"
+      </div>
+      <div class="tool-outputs">
+        <div class="tool-output">
+          <div class="tool-output-name">GOOGLE TRANSLATE <span class="accuracy-tag partial-tag">PARTIAL</span></div>
+          <p>"Brother, there is an urgent meeting tomorrow, the boss said reply ASAP otherwise there will be a problem"</p>
+          <small>Literal. "Brother" misses the casual register. Sounds robotic.</small>
+        </div>
+        <div class="tool-output">
+          <div class="tool-output-name">DEEPL <span class="accuracy-tag miss-tag">MISS</span></div>
+          <p>"Brother there is an urgent meeting tomorrow, the boss said reply ASAP or there will be a problem"</p>
+          <small>Nearly identical to Google. No tone awareness. DeepL has limited Hindi support.</small>
+        </div>
+        <div class="tool-output">
+          <div class="tool-output-name">CHATGPT (GPT-4) <span class="accuracy-tag partial-tag">PARTIAL</span></div>
+          <p>"Hey, there's an urgent meeting tomorrow. The boss wants you to reply ASAP, or there'll be trouble."</p>
+          <small>Better tone but requires prompt engineering. Inconsistent across sessions.</small>
+        </div>
+        <div class="tool-output mixingo-output">
+          <div class="tool-output-name">✦ MIXINGO <span class="accuracy-tag">NATURAL</span></div>
+          <p>"Dude, urgent meeting tomorrow — boss says reply ASAP or it's gonna be a problem."</p>
+          <small>Preserves casual register. "bhai" → "dude" (not "brother"). Tone: urgent + informal.</small>
+        </div>
+      </div>
+      <p class="live-compare-note">Test conducted June 2026. Results may vary. Mixingo output shown is from pre-launch model. <a href="compare.html#sources">Full methodology →</a></p>
+    </section>
+
+    <section class="social-proof shell">
+      <div class="section-label">EARLY REACTIONS</div>
+      <h2>What beta testers say.</h2>
+      <div class="social-proof-grid">
+        <div class="testimonial">
+          <blockquote>"I pasted a message from my mom — half Hindi, half English, all WhatsApp slang. Mixingo was the first translator that didn't make her sound like a textbook."</blockquote>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar" style="background:#efe0c8">प्</div>
+            <div><cite>Priya S.</cite><small>Beta tester · Delhi</small></div>
+          </div>
+        </div>
+        <div class="testimonial">
+          <blockquote>"We handle 2,000 support tickets a day in Taglish. Google gives us robotic English. Mixingo actually captures what the customer meant."</blockquote>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar" style="background:#d8e8c0">M</div>
+            <div><cite>Marco R.</cite><small>CX Lead · Manila-based SaaS</small></div>
+          </div>
+        </div>
+        <div class="testimonial">
+          <blockquote>"I've been prompting GPT-4 for Hinglish translation for months. Mixingo gives me better output in one API call — no prompt, no fine-tuning."</blockquote>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar" style="background:#bfcfdc">A</div>
+            <div><cite>Arjun K.</cite><small>Full-stack developer · Bangalore</small></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="pricing shell" id="pricing">
       <div class="section-label">04 — FOUNDING PRICING</div>
       <div class="pricing-title">
-        <h2>Start free.<br>Stay because it <em>gets you.</em></h2>
+        <h2>Start free.<br><em>If it works, $3.99 keeps it working.</em></h2>
         <div class="toggle"><button class="active">Monthly</button><button>Yearly <span>Save 37%</span></button></div>
       </div>
       <div class="plans">
-        <article><span class="plan-name">EXPLORER</span>
+        <article><span class="plan-name">CURIOUS</span>
           <h3>Free</h3>
-          <p>For everyday messages, captions and curious minds.</p><a class="plan-button" href="#demo">Start
+          <p>Try it on your messiest sentence. No account needed to start.</p><a class="plan-button" href="#demo">Start
             translating</a>
           <ul>
             <li>✓ 250K characters / month</li>
@@ -268,9 +353,9 @@
           </ul>
         </article>
         <article class="popular">
-          <div class="popular-tag">MOST LOVED</div><span class="plan-name">FLUENT</span>
+          <div class="popular-tag">RECOMMENDED</div><span class="plan-name">BUILDER</span>
           <h3><sup>$</sup>3.99<small>/ month</small></h3>
-          <p>For creators, builders and multilingual teams.</p><a class="plan-button filled" href="#">Go Fluent
+          <p>For developers and creators shipping products for multilingual users.</p><a class="plan-button filled" href="#">Go Builder
             <span>↗</span></a>
           <ul>
             <li>✓ 1M characters / month</li>
@@ -291,33 +376,22 @@
           </ul>
         </article>
       </div>
-      <p class="annual-note">Founding offer: <strong>$29.99/year</strong> for the Beta members. Same generous
-        limits, billed annually.</p>
-    </section>
-
-    <section class="soon shell">
-      <div class="soon-copy"><span>ROADMAP — NOT THE CORE OFFER</span>
-        <h2>Files can wait.<br>Code-mixed text comes first.</h2>
-        <p>PDF and file translation are planned later. Today Mixingo stays focused on the harder wedge: real-time hybrid
-          language text for web users and API products.</p><a href="developers.html">See the API direction
-          <span>↗</span></a>
-      </div>
-      <div class="file-stack">
-        <div class="file f3"></div>
-        <div class="file f2"></div>
-        <div class="file f1"><span>TEXT API</span><i></i><i></i><i></i><b>✦</b></div>
-      </div>
+      <p class="annual-note">First 1,000 beta members lock in <strong>$29.99/year</strong> — permanently. After that, yearly goes to $39.99. This is the only time this price exists.</p>
     </section>
 
     <section class="faq shell" id="faq">
       <div>
         <div class="section-label">05 — FAQ</div>
-        <h2>Questions,<br><em>translated.</em></h2>
+        <h2>Real questions.<br><em>Straight answers.</em></h2>
       </div>
       <div class="accordion">
         <details open>
+          <summary>Why not just use GPT-4 with a prompt?<span>+</span></summary>
+          <p>You can. A lot of developers start there. But you'll spend time maintaining that prompt, debugging edge cases, handling script detection yourself, and paying frontier model prices for every translation call. Mixingo is a purpose-built endpoint — cheaper per call, no prompt maintenance, structured output every time.</p>
+        </details>
+        <details>
           <summary>What exactly is code-mixed text?<span>+</span></summary>
-          <p>It’s how multilingual people naturally communicate — switching between languages, scripts, and slang within
+          <p>It's how multilingual people naturally communicate — switching between languages, scripts, and slang within
             the same sentence. Think Hinglish, Spanglish, Arabizi, Taglish, and countless everyday combinations.</p>
         </details>
         <details>
@@ -327,8 +401,11 @@
         </details>
         <details>
           <summary>Which languages does Mixingo support?<span>+</span></summary>
-          <p>Mixingo is designed for widely spoken languages and their most common mixed-language combinations. Coverage
-            continues to expand based on real usage.</p>
+          <p>Hinglish, Spanglish, Taglish, Singlish, Arabizi, and Manglish are fully supported at launch. More pairs are added based on what beta users actually send — not what we assume they'll need.</p>
+        </details>
+        <details>
+          <summary>What does the API actually return?<span>+</span></summary>
+          <p>A JSON response with the translated text, detected language mix, script type, and tone classification. Streaming available for live chat use cases. See the <a href="developers.html">developer page</a> for the full schema preview.</p>
         </details>
         <details>
           <summary>Does web and API usage share the same limit?<span>+</span></summary>
@@ -345,13 +422,13 @@
     <section class="waitlist shell" id="waitlist">
       <div class="waitlist-copy">
         <div class="section-label">06 — PRIVATE BETA</div>
-        <h2>Help shape translation<br>for the <em>real internet.</em></h2>
-        <p>Join the founding waitlist for early access, launch pricing and a direct line to the people building Mixingo.
+        <h2>2 billion people mix languages daily.<br><em>No translator was built for them. Until now.</em></h2>
+        <p>Join the founding waitlist — this is the only time these terms exist.
         </p>
         <ul>
-          <li><span>01</span> Early product access</li>
-          <li><span>02</span> Founding-member pricing</li>
-          <li><span>03</span> Influence the language roadmap</li>
+          <li><span>—</span> You get in before anyone else</li>
+          <li><span>—</span> You lock in $29.99/year forever (goes to $39.99 after 1,000 signups)</li>
+          <li><span>—</span> You tell us which language pairs to build next</li>
         </ul>
       </div>
       <form class="waitlist-form" id="waitlistForm"
@@ -361,12 +438,12 @@
           placeholder="What should we call you?" required><label for="email">Work or personal email</label><input
           id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required><label
           for="usecase">I’d use Mixingo for</label><select id="usecase" name="usecase">
+          <option>My app or API (Developer)</option>
+          <option>Customer support (Business)</option>
+          <option>Content & communities (Creator)</option>
           <option>Everyday translation</option>
           <option>Studying & learning</option>
-          <option>Content & communities</option>
-          <option>My app or API</option>
-          <option>Customer support</option>
-        </select><button class="button primary" type="submit">Request early access <span>↗</span></button>
+        </select><button class="button primary" type="submit">Get early access <span>↗</span></button>
         <small>No spam — only useful beta updates.</small>
       </form>
     </section>
@@ -374,8 +451,8 @@
     <section class="final-cta">
       <div class="cta-orb"></div>
       <div class="shell"><span class="mini-mark">✦</span>
-        <h2>Say it your way.<br><em>We’ll understand.</em></h2>
-        <p>The multilingual internet deserves a translator that actually understands it.</p><a class="button light"
+        <h2>Say it your way.<br><em>We'll understand.</em></h2>
+        <p>It's going to come back wrong on Google. It doesn't have to.</p><a class="button light"
           href="#waitlist">Join the Mixingo beta <span>↗</span></a><small>Private beta · Founding access · Built with
           early users</small>
       </div>

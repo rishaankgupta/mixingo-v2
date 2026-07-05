@@ -242,9 +242,9 @@ a {
 }
 
 .hero h1 {
-    font-size: clamp(64px, 8.2vw, 112px);
-    line-height: .91;
-    letter-spacing: -7px;
+    font-size: clamp(42px, 5.6vw, 72px);
+    line-height: .95;
+    letter-spacing: -4px;
     margin: 25px 0 30px;
     font-weight: 700
 }
@@ -808,6 +808,7 @@ textarea {
     margin-bottom: 65px
 }
 
+
 .section-title>p {
     max-width: 380px;
     font-size: 14px;
@@ -1009,7 +1010,11 @@ code i {
 .toggle {
     border: 1px solid var(--line);
     padding: 4px;
-    border-radius: 9px
+    border-radius: 9px;
+    display: inline-flex !important;
+    flex-direction: row !important;
+    align-items: center;
+    width: max-content;
 }
 
 .toggle button {
@@ -1017,7 +1022,8 @@ code i {
     background: transparent;
     padding: 9px 12px;
     border-radius: 6px;
-    font: 600 10px Manrope
+    font: 600 10px Manrope;
+    white-space: nowrap;
 }
 
 .toggle .active {
@@ -1308,9 +1314,9 @@ code i {
 }
 
 .final-cta h2 {
-    font-size: clamp(55px, 7vw, 90px);
-    letter-spacing: -5px;
-    line-height: .96;
+    font-size: clamp(32px, 4.5vw, 56px);
+    letter-spacing: -3px;
+    line-height: 1.04;
     margin: 30px 0 20px
 }
 
@@ -1607,9 +1613,9 @@ textarea[readonly] {
 .compare-intro h2,
 .waitlist h2,
 .page-hero h1 {
-    font-size: clamp(46px, 6vw, 76px);
-    line-height: 1.02;
-    letter-spacing: -4px;
+    font-size: clamp(34px, 4.5vw, 54px);
+    line-height: 1.08;
+    letter-spacing: -2.5px;
     margin: 0
 }
 
@@ -1797,7 +1803,192 @@ textarea[readonly] {
     font-size: 8px;
     color: var(--muted);
     margin-top: 12px;
+    margin-bottom: 0;
     line-height: 1.5
+}
+
+.waitlist-form {
+    justify-content: flex-start
+}
+
+/* ── Social Proof ─────────────────────────────────────────────────── */
+.social-proof {
+    padding: 100px 0;
+    border-top: 1px solid var(--line)
+}
+
+.social-proof-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin-top: 50px
+}
+
+.testimonial {
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 30px;
+    background: rgba(255, 255, 255, .25);
+    display: flex;
+    flex-direction: column;
+    gap: 18px
+}
+
+.testimonial blockquote {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.7;
+    font-weight: 500;
+    color: var(--ink)
+}
+
+.testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: auto
+}
+
+.testimonial-avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-size: 14px;
+    font-weight: 700;
+    flex-shrink: 0
+}
+
+.testimonial-author cite {
+    font-style: normal;
+    font-size: 11px;
+    font-weight: 700;
+    display: block
+}
+
+.testimonial-author small {
+    font-size: 9px;
+    color: var(--muted);
+    display: block;
+    margin-top: 2px
+}
+
+/* ── Live Comparison Block ─────────────────────────────────────── */
+.live-compare {
+    padding: 90px 0;
+    border-top: 1px solid var(--line)
+}
+
+.live-compare h2 {
+    font-size: clamp(30px, 4vw, 48px);
+    letter-spacing: -2px;
+    margin-bottom: 14px
+}
+
+.live-compare > p {
+    font-size: 13px;
+    color: var(--muted);
+    max-width: 620px;
+    line-height: 1.7;
+    margin-bottom: 40px
+}
+
+.live-compare-sentence {
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 20px;
+    font: 500 16px 'DM Mono';
+    color: var(--ink)
+}
+
+.live-compare-sentence small {
+    display: block;
+    font: 400 9px 'DM Mono';
+    color: var(--muted);
+    margin-bottom: 10px;
+    letter-spacing: 1px
+}
+
+.tool-outputs {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px
+}
+
+.tool-output {
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 22px;
+    background: rgba(255, 255, 255, .25)
+}
+
+.tool-output.mixingo-output {
+    background: var(--green);
+    color: white;
+    border-color: var(--green)
+}
+
+.tool-output-name {
+    font: 600 9px 'DM Mono';
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+}
+
+.tool-output-name .accuracy-tag {
+    font: 500 8px 'DM Mono';
+    padding: 3px 7px;
+    border-radius: 20px;
+    letter-spacing: .5px
+}
+
+.mixingo-output .accuracy-tag {
+    background: var(--mint);
+    color: var(--ink)
+}
+
+.miss-tag {
+    background: #f0c2ad;
+    color: #8a3a1e
+}
+
+.partial-tag {
+    background: #f0e0c0;
+    color: #7a5a1e
+}
+
+.tool-output p {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.5;
+    margin: 0
+}
+
+.mixingo-output p {
+    color: white
+}
+
+.tool-output small {
+    display: block;
+    font-size: 9px;
+    color: var(--muted);
+    margin-top: 8px
+}
+
+.mixingo-output small {
+    color: #a7c2b9
+}
+
+.live-compare-note {
+    font-size: 9px;
+    color: var(--muted);
+    margin-top: 20px;
+    line-height: 1.6
 }
 
 .form-success {
@@ -2041,9 +2232,9 @@ textarea[readonly] {
     }
 
     .hero h1 {
-        font-size: clamp(46px, 13vw, 62px);
-        line-height: .93;
-        letter-spacing: -3px
+        font-size: clamp(30px, 8.5vw, 44px);
+        line-height: .96;
+        letter-spacing: -2px
     }
 
     .hero-copy {
@@ -2166,9 +2357,19 @@ textarea[readonly] {
     .compare-intro h2,
     .waitlist h2,
     .page-hero h1 {
-        font-size: 40px;
-        letter-spacing: -2px;
-        line-height: 1.04
+        font-size: 28px;
+        letter-spacing: -1.5px;
+        line-height: 1.1
+    }
+
+    .social-proof-grid,
+    .tool-outputs {
+        grid-template-columns: 1fr
+    }
+
+    .final-cta h2 {
+        font-size: 28px;
+        letter-spacing: -1.5px
     }
 
     .problem-grid {
