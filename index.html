@@ -5,18 +5,18 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description"
-    content="Mixingo translates mixed-language text that Google gets wrong — Hinglish, Spanglish, Taglish, Arabizi. Free web translator and developer API." />
+    content="Mixingo's private-beta web translator and API support Hinglish, Spanglish, PDFs, DOCX, TXT and ebooks with natural tone and layout-aware file output." />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://mixingo.dev/" />
   <meta property="og:title" content="Mixingo — Translation for how people actually write" />
-  <meta property="og:description" content="The first translator built for mixed-language text. Hinglish, Spanglish, Taglish, Arabizi — translated naturally." />
+  <meta property="og:description" content="Private-beta web and API translation for mixed-language text, PDFs, DOCX, TXT and ebooks — with file structure and layout preserved as closely as possible." />
   <meta property="og:url" content="https://mixingo.dev/" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Mixingo" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Mixingo — Translation for mixed-language text" />
-  <meta name="twitter:description" content="Google translates Hindi. DeepL translates English. Nobody translates Hinglish. Until Mixingo." />
-  <title>Mixingo — Translation for Hinglish, Spanglish, Taglish &amp; mixed-language text</title>
+  <meta name="twitter:title" content="Mixingo — Translation for mixed-language text and files" />
+  <meta name="twitter:description" content="Private-beta web and API translation for Hinglish, Spanglish, PDFs, DOCX, TXT and ebooks — with layout-aware document output." />
+  <title>Mixingo — Mixed-language, PDF &amp; document translation</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -31,7 +31,12 @@
     "url": "https://mixingo.dev",
     "applicationCategory": "UtilitiesApplication",
     "operatingSystem": "Web",
-    "description": "Translation API and web tool for code-mixed, multilingual text like Hinglish, Spanglish, Taglish, and Arabizi.",
+    "description": "Private-beta web translator and full-access API for code-mixed multilingual text and layout-aware PDF, DOCX, TXT, and ebook translation.",
+    "featureList": [
+      "Code-mixed translation for Hinglish, Spanglish, Taglish, and Arabizi",
+      "Private-beta PDF, DOCX, TXT, and ebook translation on web and API",
+      "Best-effort preservation of document formatting and layout"
+    ],
     "offers": {
       "@type": "Offer",
       "price": "0",
@@ -69,7 +74,7 @@
       <div class="eyebrow reveal"><span></span> Private beta · The translator built for how the internet actually speaks</div>
       <h1 class="reveal delay-1">Say it your way.<br><em>We'll translate it right.</em>
       </h1>
-      <p class="hero-copy reveal delay-2">People write "kal milte hain?" and "¿puedo reschedule?" every day. Every translation tool turns it into something stiff, robotic, and wrong. Mixingo is built for those sentences — as a web translator anyone can use, and an API developers can ship.</p>
+      <p class="hero-copy reveal delay-2">People write "kal milte hain?" and "¿puedo reschedule?" every day. Every translation tool turns it into something stiff, robotic, and wrong. Mixingo is built for those words — whether you paste them, upload the PDF or document they live in, or ship translation through the API.</p>
       <div class="hero-actions reveal delay-3"><a class="button primary" href="#waitlist">Get API early access
           <span>↗</span></a><a class="watch" href="#product"><b>▶</b> See the difference ↓</a></div>
       <div class="proof reveal delay-3">
@@ -198,20 +203,65 @@
         </article>
         <article class="feature feature-wide" id="developers">
           <div><span class="num">04</span>
-            <h3>One API, ready to ship.</h3>
-            <p>Predictable JSON. Streaming for live chat. Non-streaming for batch jobs. Script detection baked in. Account-level usage controls. No prompt engineering required.</p><a href="developers.html">Explore docs preview
+            <h3>One API, every workflow.</h3>
+            <p>Predictable JSON for text. Complete translated files for PDF, TXT, DOCX, and ebook inputs. Streaming for live chat, layout-aware document output, script detection, and account-level usage controls — all through full API access.</p><a href="developers.html">Explore docs preview
               <span>↗</span></a>
           </div>
-          <pre><code><span>const</span> result = <span>await</span> mixingo.translate({
-  text: <i>"bhai kal urgent hai, boss ne bola ASAP reply karo"</i>,
-  target: <i>"en"</i>,
-  style: <i>"natural"</i>
+          <pre><code><span>const</span> text = <span>await</span> mixingo.translate({
+  text: <i>"bhai kal urgent hai"</i>,
+  target: <i>"en"</i>
 });
 
-<span class="comment">// "Hey, there's an urgent meeting tomorrow —</span>
-<span class="comment">//  the boss wants a reply ASAP"</span>
-<span class="comment">// tone: urgent | detected: Hinglish</span></code></pre>
+<span>const</span> file = <span>await</span> mixingo.translateFile({
+  file: documentFile, <span class="comment">// PDF · TXT · DOCX · ebook</span>
+  target: <i>"en"</i>,
+  preserveLayout: <span>true</span>
+});
+
+<span class="comment">// Full API access: text in, files in, natural output out.</span></code></pre>
         </article>
+      </div>
+    </section>
+
+    <section class="document-section shell" id="documents">
+      <div class="document-feature">
+        <div class="document-copy">
+          <span class="document-eyebrow"><i></i> SUPPORTED IN PRIVATE BETA</span>
+          <h2>Same file.<br><em>New language.</em></h2>
+          <p class="document-lead">Upload or send a PDF, TXT, DOCX, or ebook through the web translator or API and get back a translated file — not a plain-text dump. Mixingo is built to keep the original structure, spacing, images, typography, and layout as close to the source as possible.</p>
+          <ul class="document-formats" aria-label="Supported file types">
+            <li>PDF</li><li>TXT</li><li>DOCX</li><li>EBOOKS</li>
+          </ul>
+          <div class="document-fidelity">
+            <article>
+              <span>01</span>
+              <div><h3>Everyday files, near-original</h3>
+                <p>For straightforward TXT, DOCX, ebook, and text-led PDF files, fidelity should be near-original. In most cases, only the words change.</p>
+              </div>
+            </article>
+            <article>
+              <span>02</span>
+              <div><h3>Complex PDFs, honest limits</h3>
+                <p>Dense columns, overlapping layers, scanned pages, text baked into images, unusual fonts, and highly designed layouts can shift or leave some image text unchanged. We preserve as much as possible, but these files may not be perfectly consistent.</p>
+              </div>
+            </article>
+          </div>
+          <a class="document-link" href="#waitlist">Get document translation access <span>↗</span></a>
+        </div>
+        <div class="document-visual" aria-hidden="true">
+          <span class="document-orbit orbit-one">TXT</span>
+          <span class="document-orbit orbit-two">EBOOK</span>
+          <div class="document-stack">
+            <div class="document-sheet sheet-back"><span>EBOOK</span></div>
+            <div class="document-sheet sheet-middle"><span>DOCX</span></div>
+            <div class="document-sheet sheet-front">
+              <div class="sheet-head"><span>PDF</span><small>LAYOUT-AWARE</small></div>
+              <div class="sheet-image"><i></i><b></b></div>
+              <div class="sheet-lines"><i></i><i></i><i></i><i></i></div>
+              <div class="sheet-status"><span>EN</span><b>→</b><span>ES</span><em>✓</em></div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -259,8 +309,8 @@
               <td>Broad suite</td>
             </tr>
             <tr>
-              <td>Documents / images / speech</td>
-              <td class="mixingo-col">Roadmap</td>
+              <td>PDF, DOCX, TXT &amp; ebook translation</td>
+              <td class="mixingo-col"><b>Web + API</b></td>
               <td><b>Strong</b></td>
               <td><b>Strong</b></td>
               <td><b>Strong</b></td>
@@ -269,8 +319,8 @@
         </table>
       </div>
       <p class="comparison-note">*Competitor capabilities vary by language, plan and API. Comparison reflects public
-        product positioning, not a claim that competitors can never process mixed input. <a
-          href="compare.html#sources">View methodology & sources →</a></p>
+        product positioning, not a claim that competitors can never process mixed input. Document-layout fidelity varies
+        with file complexity across products. <a href="compare.html#sources">View methodology & sources →</a></p>
     </section>
 
     <section class="live-compare shell">
@@ -412,9 +462,8 @@
           <p>Yes. Signed-in accounts use one clear, unified character allowance across both web and API translation.</p>
         </details>
         <details>
-          <summary>Can Mixingo translate PDFs or files?<span>+</span></summary>
-          <p>Not yet. Mixingo is focused on fast, excellent text translation today. File translation is on the roadmap.
-          </p>
+          <summary>Which files can Mixingo translate?<span>+</span></summary>
+          <p>PDF, TXT, DOCX, and ebook files are supported across both the private-beta web translator and API, so API users get the same complete file-translation access as web users. Our goal is to return the same file with its text translated while preserving the original formatting, images, spacing, and layout. Straightforward files should be near-original — in most cases, only the words change. Highly designed PDFs with dense columns, overlapping layers, scanned pages, text baked into images, unusual fonts, or many visual elements can be less consistent; some image text may remain unchanged, so we preserve as much as possible rather than promise pixel-perfect output for every file.</p>
         </details>
       </div>
     </section>
@@ -442,6 +491,7 @@
           <option>Customer support (Business)</option>
           <option>Content & communities (Creator)</option>
           <option>Everyday translation</option>
+          <option>PDF &amp; document translation</option>
           <option>Studying & learning</option>
         </select><button class="button primary" type="submit">Get early access <span>↗</span></button>
         <small>No spam — only useful beta updates.</small>

@@ -131,8 +131,8 @@
       <div class="old-label">Current subheading</div>
       <div class="old-text">Mixingo is a web translator and developer API for code-mixed language: slang, transliteration, script switching and two-language sentences that generic tools often normalize into something no one would actually say.</div>
       <div class="new-label">New</div>
-      <div class="new-text">People write "kal milte hain?" and "¿puedo reschedule?" every day. Every translation tool they try turns it into something stiff, robotic, and wrong. Mixingo is built for those sentences — as a web translator anyone can use, and an API developers can ship.</div>
-      <div class="reason">Why: You led with real examples of the problem, not a feature list. "Stiff, robotic, and wrong" creates emotion — those are words people feel when bad translation happens to them. Ends with a clear two-audience hook (users + devs).</div>
+      <div class="new-text">People write "kal milte hain?" and "¿puedo reschedule?" every day. Every translation tool they try turns it into something stiff, robotic, and wrong. Mixingo is built for those words — whether users paste them, upload a PDF or document, or developers send text and complete files through the full-access API.</div>
+      <div class="reason">Why: Leads with real examples of the problem rather than a feature list, then makes it explicit that both the web product and API support direct text and complete file translation.</div>
     </div>
 
     <div class="change-block keep">
@@ -208,8 +208,8 @@
       <div class="old-label">Current sub-point 03 — Developers</div>
       <div class="old-text">Developers need an API, not a demo trick — Apps need predictable JSON, streaming and non-streaming modes, script detection, usage limits and examples that map to real product flows.</div>
       <div class="new-label">New</div>
-      <div class="new-text">Developers need something that ships — Not a prompt you have to maintain. Not a translation model you have to fine-tune. One API call that returns predictable JSON, handles script switching, and doesn't break when your user types the way they actually think.</div>
-      <div class="reason">Why: Developers hate maintenance. The line "a prompt you have to maintain" directly addresses the alternative (prompting GPT yourself) and makes Mixingo the lazy, correct choice. That's a real developer value.</div>
+      <div class="new-text">Developers need something that ships — Not a prompt you have to maintain. Not a translation model you have to fine-tune. One full-access API that returns predictable JSON for text, translated files for PDF/TXT/DOCX/ebook inputs, and doesn't break when users communicate the way they actually think.</div>
+      <div class="reason">Why: Makes the API's complete scope part of the developer value proposition instead of treating document translation as a separate or web-only feature.</div>
     </div>
   </div>
 
@@ -252,25 +252,28 @@
       <div class="old-label">Current point 04</div>
       <div class="old-text">Built for developer revenue. — Use one API for chat, support, marketplaces and communities with streaming, non-streaming, script detection and account-level usage controls.</div>
       <div class="new-label">New</div>
-      <div class="new-text">One API, ready to ship — Predictable JSON. Streaming for live chat. Non-streaming for batch jobs. Script detection baked in. Account-level usage controls so you don't get surprised by a bill. No prompt engineering required.</div>
-      <div class="reason">Why: "Built for developer revenue" is your goal, not theirs. Every line here is about what the developer gets. "No prompt engineering required" is the most powerful line — it directly names the alternative and makes Mixingo the easier path.</div>
+      <div class="new-text">One API, every workflow — Predictable JSON for text. Complete translated files for PDF, TXT, DOCX, and ebook inputs. Streaming for live chat, layout-aware document output, script detection, and account-level usage controls — all through full API access.</div>
+      <div class="reason">Why: Every line is about what the developer gets, and file translation is presented as a first-class API capability rather than an omitted channel.</div>
     </div>
 
     <div class="change-block replace">
       <span class="tag replace">Replace</span>
       <div class="old-label">Current code snippet comment</div>
       <div class="old-text">// "Want to meet tomorrow?"</div>
-      <div class="new-label">New code snippet — show a harder example</div>
+      <div class="new-label">New code snippet — show text + file parity</div>
       <div class="new-text">
-        const result = await mixingo.translate({<br>
-        &nbsp;&nbsp;text: "bhai kal urgent meeting hai, boss ne bola ASAP reply karo",<br>
-        &nbsp;&nbsp;target: "en",<br>
-        &nbsp;&nbsp;style: "natural"<br>
+        const text = await mixingo.translate({<br>
+        &nbsp;&nbsp;text: "bhai kal urgent hai",<br>
+        &nbsp;&nbsp;target: "en"<br>
         });<br><br>
-        // "Hey, there's an urgent meeting tomorrow — the boss wants a reply ASAP"<br>
-        // tone: urgent | detected: Hinglish | scripts: Roman+English
+        const file = await mixingo.translateFile({<br>
+        &nbsp;&nbsp;file: documentFile, // PDF · TXT · DOCX · ebook<br>
+        &nbsp;&nbsp;target: "en",<br>
+        &nbsp;&nbsp;preserveLayout: true<br>
+        });<br><br>
+        // Full API access: direct text and complete translated files
       </div>
-      <div class="reason">Why: The current example ("kal milte hain?" → "Want to meet tomorrow?") is too easy. Any translator gets that right. Show a harder sentence with urgency, slang, and a boss — something that fails on Google. Also show the tone/detection metadata — it makes the API feel more real and more valuable.</div>
+      <div class="reason">Why: One compact example proves that developers receive both text and document workflows through the API. The contract remains clearly presented as a preview while the backend is being finalized.</div>
     </div>
   </div>
 
@@ -340,14 +343,14 @@
     </div>
   </div>
 
-  <!-- ROADMAP SECTION -->
+  <!-- DOCUMENT TRANSLATION SECTION -->
   <div class="section">
-    <div class="section-label">Roadmap Section <span class="priority-badge p-critical">Delete</span></div>
+    <div class="section-label">Document Translation Section <span class="priority-badge p-critical">Add</span></div>
 
-    <div class="change-block delete">
-      <span class="tag delete">Delete entire section</span>
-      <div class="old-text">ROADMAP — NOT THE CORE OFFER — Files can wait. Code-mixed text comes first. PDF and file translation are planned later. Today Mixingo stays focused on the harder wedge: real-time hybrid language text for web users and API products.</div>
-      <div class="reason">Why: An entire section defending what you're not building draws attention to your gaps. If someone asks about PDFs, the FAQ answers it. This section actively hurts conversion. Delete it.</div>
+    <div class="change-block add">
+      <span class="tag add">Add dedicated homepage section</span>
+      <div class="new-text">SUPPORTED IN PRIVATE BETA<br><br>Same file. New language.<br><br>Upload or send a PDF, TXT, DOCX, or ebook through the web translator or full-access API and get back a translated file — not a plain-text dump. Preserve the original structure, spacing, images, typography, and layout as closely as possible.<br><br>For straightforward files, output should be near-original and only the words should change. For heavily designed PDFs with dense columns, overlapping layers, scanned pages, image-based text, or unusual fonts, preserve as much as possible without claiming guaranteed pixel-perfect output; some image text may remain unchanged.</div>
+      <div class="reason">Why: File translation is now part of both the web and API product promise, so it needs a high-salience section rather than a roadmap disclaimer. The copy makes the supported formats, full API access, desired outcome, and complex-PDF limits explicit.</div>
     </div>
   </div>
 
@@ -533,8 +536,8 @@
       <div class="old-label">Current badge</div>
       <div class="old-text">DEVELOPER PREVIEW · PRE-LAUNCH</div>
       <div class="new-label">New</div>
-      <div class="new-text">DEVELOPER PREVIEW · SHIPPING SOON · JOIN THE WAITLIST FOR EARLY DOCS ACCESS</div>
-      <div class="reason">Why: "Shipping soon" creates momentum. "Early docs access" is a specific, valuable incentive for a developer to join the waitlist — more valuable than just "early access."</div>
+      <div class="new-text">DEVELOPER PREVIEW · TEXT + FILES · FULL API ACCESS</div>
+      <div class="reason">Why: States the complete API scope immediately. Developers should not have to infer whether document translation is web-only.</div>
     </div>
 
     <div class="change-block replace">
@@ -551,8 +554,8 @@
       <div class="old-label">Current subheading</div>
       <div class="old-text">Integrate translation for Hinglish, Spanglish, Taglish, Singlish, Arabizi and other hybrid text without forcing users to rewrite messages into one formal language first.</div>
       <div class="new-label">New</div>
-      <div class="new-text">One API endpoint. Paste in Hinglish, Spanglish, Arabizi, Taglish — get back natural translation with detected script, tone, and language mix in the response JSON. No prompt engineering. No fine-tuning. No custom model maintenance.</div>
-      <div class="reason">Why: Every "No X" in this copy is a cost the developer currently bears. Naming those costs is your value proposition. Developers immediately think "wait, I don't want to do that either."</div>
+      <div class="new-text">One API with full product access. Send Hinglish, Spanglish, Arabizi, or Taglish as text — or submit a PDF, TXT, DOCX, or ebook and receive the translated file with its layout preserved as closely as possible.</div>
+      <div class="reason">Why: Makes the text and file workflows equally explicit and answers the API-scope question before a developer has to ask it.</div>
     </div>
   </div>
 
@@ -563,25 +566,23 @@
       <span class="tag replace">Replace</span>
       <div class="old-label">Current code example</div>
       <div class="old-text">const result = await mixingo.translate({ text: "yaar kal milte hain?", target: "en", style: "natural" }); // "Hey, want to meet tomorrow?"</div>
-      <div class="new-label">New — show a harder, real-world example with response structure</div>
+      <div class="new-label">New — show both text and file access</div>
       <div class="new-text">
-// Request<br>
-const result = await mixingo.translate({<br>
-&nbsp;&nbsp;text: "bhai kal urgent hai, boss ne bola ASAP reply karna",<br>
-&nbsp;&nbsp;target: "en",<br>
-&nbsp;&nbsp;style: "natural",<br>
-&nbsp;&nbsp;stream: false<br>
+// Text request<br>
+const text = await mixingo.translate({<br>
+&nbsp;&nbsp;text: "bhai kal urgent hai",<br>
+&nbsp;&nbsp;target: "en"<br>
 });<br><br>
-// Response<br>
-{<br>
-&nbsp;&nbsp;"translated": "Hey, tomorrow's urgent — the boss wants a reply ASAP",<br>
-&nbsp;&nbsp;"detected_mix": "Hinglish",<br>
-&nbsp;&nbsp;"scripts": ["Roman", "English"],<br>
-&nbsp;&nbsp;"tone": "urgent",<br>
-&nbsp;&nbsp;"confidence": 0.94<br>
-}
+// File request<br>
+const file = await mixingo.translateFile({<br>
+&nbsp;&nbsp;file: documentFile, // PDF · TXT · DOCX · ebook<br>
+&nbsp;&nbsp;target: "en",<br>
+&nbsp;&nbsp;preserveLayout: true<br>
+});<br><br>
+// file.output → translated document<br>
+// complex layouts use best-effort preservation
       </div>
-      <div class="reason">Why: Showing the response JSON is the single most important thing on this page. Developers don't trust what they can't see. The tone and confidence fields make the API feel sophisticated and useful beyond just the translated text.</div>
+      <div class="reason">Why: The developer page must demonstrate that API access is not a reduced text-only surface. Showing both calls makes full product parity concrete while keeping the contract visibly labeled as a preview.</div>
     </div>
 
     <div class="change-block replace">
@@ -589,8 +590,8 @@ const result = await mixingo.translate({<br>
       <div class="old-label">Current section header</div>
       <div class="old-text">Simple in. Natural out.</div>
       <div class="new-label">New</div>
-      <div class="new-text">What the API actually returns.</div>
-      <div class="reason">Why: Developers don't want slogans. They want specs. Name the section what it is.</div>
+      <div class="new-text">One API. Every translation workflow.</div>
+      <div class="reason">Why: Communicates full access without making either text or file translation sound secondary.</div>
     </div>
   </div>
 
@@ -612,10 +613,11 @@ const result = await mixingo.translate({<br>
       <div class="old-text">Modes / Detection / Trust</div>
       <div class="new-label">New — expand each with specifics</div>
       <div class="new-text">
-        <strong>Streaming:</strong> Real-time output for live chat interfaces. Pass stream: true and handle chunks as they arrive. Latency target: under 300ms first token. (Target — not yet measured in production.)<br><br>
-        <strong>Response data:</strong> Every call returns translated text + detected language mix + script type + tone classification. Use these to route, escalate, or tag content without a second API call.<br><br>
-        <strong>Rate limits & billing:</strong> Usage is tracked at account level across web and API. Free tier: 250K chars/month. Paid: 1M chars/month. No per-key billing surprises.<br><br>
-        <strong>What we're still building:</strong> Batch mode, webhook support, SDK packages (Node, Python). These ship after private beta. Docs preview available to waitlist members now.
+        <strong>Streaming text:</strong> Real-time output for live chat interfaces. Pass stream: true and handle chunks as they arrive. Latency target: under 300ms first token. (Target — not yet measured in production.)<br><br>
+        <strong>Full file access:</strong> Send PDF, TXT, DOCX, and ebook files through the API and receive translated files back. Straightforward layouts should remain near-original; complex PDFs use best-effort preservation.<br><br>
+        <strong>Response data:</strong> Text calls return translated text + detected language mix + script type + tone. File calls return the translated document and processing metadata.<br><br>
+        <strong>Rate limits & billing:</strong> Usage is tracked at account level across web and API. Free tier: 250K chars/month. Paid: 1M chars/month. File accounting and size limits must be explicit before launch.<br><br>
+        <strong>What we're still building:</strong> Webhook support and SDK packages (Node, Python). These ship after private beta. API preview access is available to waitlist members.
       </div>
       <div class="reason">Why: The honest admission "(Target — not yet measured in production)" and "What we're still building" are not weaknesses — they're credibility builders. A developer who sees that will trust the claims that ARE made. Lying about a 300ms target and getting caught is far worse.</div>
     </div>
@@ -632,7 +634,8 @@ const result = await mixingo.translate({<br>
       <div class="new-text">
         <strong>Customer Support:</strong> A user writes "yaar yeh product kaam nahi kar raha" in a support ticket. Your current system either fails to translate or returns "Friend this product is not working." Mixingo returns "Hey, this product isn't working" — with tone flagged as frustrated. Route to escalation automatically.<br><br>
         <strong>Community Platforms:</strong> Your moderation system needs to flag "bhai yeh toh bahut galat hai" as negative sentiment, not skip it because it's not English. Mixingo detects the sentiment in the mix, not just the language.<br><br>
-        <strong>Marketplaces:</strong> Buyer writes "bhaiya COD milega?" Seller doesn't speak Hindi. Mixingo: "Will cash on delivery be available?" Intent preserved. Deal closes.
+        <strong>Marketplaces:</strong> Buyer writes "bhaiya COD milega?" Seller doesn't speak Hindi. Mixingo: "Will cash on delivery be available?" Intent preserved. Deal closes.<br><br>
+        <strong>Document Workflows:</strong> A user uploads a PDF report, DOCX manual, TXT export, or ebook. Your product sends it through the same API and returns a translated file without forcing the user to rebuild its layout.
       </div>
       <div class="reason">Why: Each use case ends with a business outcome — escalation, flagged sentiment, deal closes. Developers ship features. Business owners pay for outcomes. This copy speaks to both in one sentence each.</div>
     </div>
@@ -646,8 +649,8 @@ const result = await mixingo.translate({<br>
       <div class="old-label">Current</div>
       <div class="old-text">Build for a multilingual internet. — Get launch updates, docs preview and early API access.</div>
       <div class="new-label">New</div>
-      <div class="new-text">Your next user is probably typing in two languages right now.<br><br>Join the waitlist and get early docs access — so you're ready when we launch.</div>
-      <div class="reason">Why: "Your next user is probably typing in two languages right now" makes the problem immediate and personal. "So you're ready when we launch" is a future-forward CTA that frames joining the waitlist as a preparation, not a gamble.</div>
+      <div class="new-text">Your next user is probably typing in two languages — or uploading a document that contains them — right now.<br><br>Join the waitlist for full API access across text, PDFs, TXT, DOCX, and ebooks.</div>
+      <div class="reason">Why: Makes the complete API scope immediate and gives developers a concrete reason to join before launch.</div>
     </div>
   </div>
 </div>
@@ -676,10 +679,12 @@ const result = await mixingo.translate({<br>
   <div class="section">
     <div class="section-label">Thesis Points <span class="priority-badge p-medium">Medium</span></div>
 
-    <div class="change-block keep">
-      <span class="tag keep">Keep</span>
+    <div class="change-block replace">
+      <span class="tag replace">Replace</span>
       <div class="old-text">Narrow on purpose — We are not trying to beat giant translation suites at documents, cameras, and every enterprise workflow on day one.</div>
-      <div class="reason">Honest and confident. Keep it.</div>
+      <div class="new-label">New</div>
+      <div class="new-text">Narrow on purpose — We are not building every camera, speech, and enterprise localization workflow on day one. We focus on translating code-mixed language naturally, whether it arrives as pasted text, a PDF, DOCX, TXT, or ebook file, or a text or file request through the full-access API.</div>
+      <div class="reason">Keeps the focused positioning without contradicting supported document translation.</div>
     </div>
 
     <div class="change-block replace">
