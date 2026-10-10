@@ -217,9 +217,10 @@ if (waitlistForm) {
     const fd = new FormData();
 
     /* User-entered */
-    fd.append('name',    waitlistForm.querySelector('[name="name"]')?.value.trim()  || '');
-    fd.append('email',   waitlistForm.querySelector('[name="email"]')?.value.trim() || '');
-    fd.append('usecase', waitlistForm.querySelector('[name="usecase"]')?.value      || '');
+    fd.append('name',           waitlistForm.querySelector('[name="name"]')?.value.trim()           || '');
+    fd.append('email',          waitlistForm.querySelector('[name="email"]')?.value.trim()          || '');
+    fd.append('institutionCode', waitlistForm.querySelector('[name="institutionCode"]')?.value.trim() || '');
+    fd.append('usecase',        waitlistForm.querySelector('[name="usecase"]')?.value               || '');
 
     /* Timestamps */
     fd.append('submittedAt', now.toISOString());
