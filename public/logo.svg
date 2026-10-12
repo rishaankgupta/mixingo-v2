@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Mixingo logo</title>
+  <desc id="desc">Three mint signal bars inside a dark green circle</desc>
+  <circle cx="256" cy="256" r="240" fill="#102b25"/>
+  <rect x="146" y="212" width="52" height="88" rx="26" fill="#c8f565"/>
+  <rect x="230" y="152" width="52" height="208" rx="26" fill="#c8f565"/>
+  <rect x="314" y="190" width="52" height="132" rx="26" fill="#c8f565"/>
+</svg>

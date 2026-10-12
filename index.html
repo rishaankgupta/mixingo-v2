@@ -5,18 +5,24 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description"
-    content="Mixingo's private-beta web translator and API support Hinglish, Spanglish, PDFs, DOCX, TXT and ebooks with natural tone and layout-aware file output." />
-  <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://mixingo.dev/" />
-  <meta property="og:title" content="Mixingo — Translation for how people actually write" />
-  <meta property="og:description" content="Private-beta web and API translation for mixed-language text, PDFs, DOCX, TXT and ebooks — with file structure and layout preserved as closely as possible." />
-  <meta property="og:url" content="https://mixingo.dev/" />
+    content="Translate standard languages into Hinglish and code-mixed styles, hybrid text back to standard, or mixes into each other. Text, files, web, and API." />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <link rel="canonical" href="https://www.mixingo.dev/" />
+  <link rel="icon" href="/logo.svg" type="image/svg+xml" />
+  <meta property="og:title" content="Mixingo — Standard and code-mixed translation" />
+  <meta property="og:description" content="Translate into or out of everyday hybrid language — including Hinglish, Spanglish, Taglish and Arabizi — across text, API and complete files." />
+  <meta property="og:url" content="https://www.mixingo.dev/" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Mixingo" />
+  <meta property="og:image" content="https://www.mixingo.dev/social-card.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Mixingo — standard and code-mixed translation in every direction" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Mixingo — Translation for mixed-language text and files" />
-  <meta name="twitter:description" content="Private-beta web and API translation for Hinglish, Spanglish, PDFs, DOCX, TXT and ebooks — with layout-aware document output." />
-  <title>Mixingo — Mixed-language, PDF &amp; document translation</title>
+  <meta name="twitter:title" content="Mixingo — Standard and code-mixed translation" />
+  <meta name="twitter:description" content="Standard to hybrid, hybrid to standard, and selected hybrid-to-hybrid translation for text and files." />
+  <meta name="twitter:image" content="https://www.mixingo.dev/social-card.png" />
+  <title>English to Hinglish &amp; Code-Mixed Translator | Mixingo</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -26,27 +32,148 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    "name": "Mixingo",
-    "url": "https://mixingo.dev",
-    "applicationCategory": "UtilitiesApplication",
-    "operatingSystem": "Web",
-    "description": "Private-beta web translator and full-access API for code-mixed multilingual text and layout-aware PDF, DOCX, TXT, and ebook translation.",
-    "featureList": [
-      "Code-mixed translation for Hinglish, Spanglish, Taglish, and Arabizi",
-      "Private-beta PDF, DOCX, TXT, and ebook translation on web and API",
-      "Best-effort preservation of document formatting and layout"
-    ],
-    "offers": {
-      "@type": "Offer",
-      "price": "0",
-      "priceCurrency": "USD"
-    },
-    "creator": {
-      "@type": "Organization",
-      "name": "Mixingo",
-      "url": "https://mixingo.dev"
-    }
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://www.mixingo.dev/#organization",
+        "name": "Mixingo",
+        "url": "https://www.mixingo.dev/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.mixingo.dev/logo.svg",
+          "width": 512,
+          "height": 512
+        },
+        "description": "Mixingo builds standard-to-code-mixed, code-mixed-to-standard, and selected code-mixed-to-code-mixed translation for text and documents.",
+        "email": "hello@mixingo.dev",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "contactType": "customer support",
+          "email": "hello@mixingo.dev",
+          "availableLanguage": "English"
+        }
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://www.mixingo.dev/#website",
+        "name": "Mixingo",
+        "url": "https://www.mixingo.dev/",
+        "publisher": { "@id": "https://www.mixingo.dev/#organization" },
+        "inLanguage": "en"
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://www.mixingo.dev/#webpage",
+        "url": "https://www.mixingo.dev/",
+        "name": "English to Hinglish & Code-Mixed Translator | Mixingo",
+        "description": "Translate standard languages into supported code-mixed styles, code-mixed language back into standard form, and selected hybrid styles into one another.",
+        "isPartOf": { "@id": "https://www.mixingo.dev/#website" },
+        "about": { "@id": "https://www.mixingo.dev/#software" },
+        "publisher": { "@id": "https://www.mixingo.dev/#organization" },
+        "primaryImageOfPage": { "@id": "https://www.mixingo.dev/#social-image" },
+        "inLanguage": "en"
+      },
+      {
+        "@type": "ImageObject",
+        "@id": "https://www.mixingo.dev/#social-image",
+        "url": "https://www.mixingo.dev/social-card.png",
+        "width": 1200,
+        "height": 630,
+        "caption": "Mixingo standard and code-mixed translation"
+      },
+      {
+        "@type": ["SoftwareApplication", "WebApplication"],
+        "@id": "https://www.mixingo.dev/#software",
+        "name": "Mixingo",
+        "url": "https://www.mixingo.dev/",
+        "applicationCategory": "UtilitiesApplication",
+        "applicationSubCategory": "Translation",
+        "operatingSystem": "Web",
+        "description": "Private-beta web translator and full-access API for standard-to-code-mixed, code-mixed-to-standard, and selected code-mixed-to-code-mixed translation.",
+        "creator": { "@id": "https://www.mixingo.dev/#organization" },
+        "publisher": { "@id": "https://www.mixingo.dev/#organization" },
+        "featureList": [
+          "Standard language to supported code-mixed target translation",
+          "Code-mixed language to standard target translation",
+          "Selected code-mixed to code-mixed translation",
+          "Hinglish, Spanglish, Taglish, Singlish, Arabizi, and Manglish beta directions",
+          "PDF, DOCX, TXT, and ebook translation on web and API",
+          "Best-effort preservation of document formatting and layout"
+        ],
+        "offers": [
+          {
+            "@type": "Offer",
+            "name": "Curious free plan",
+            "price": "0",
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/PreOrder",
+            "url": "https://www.mixingo.dev/#waitlist"
+          },
+          {
+            "@type": "Offer",
+            "name": "Builder monthly plan",
+            "price": "3.99",
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/PreOrder",
+            "url": "https://www.mixingo.dev/#pricing"
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://www.mixingo.dev/#faq-schema",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What makes Mixingo different from broad translators?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Broad translators cover far more standard languages and may handle some mixed-language text. Mixingo is purpose-built to make supported code-mixed styles explicit source and target choices across text and files: standard to hybrid, hybrid to standard, and selected hybrid to hybrid."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is code-mixed translation?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Code-mixed translation handles language that combines two or more languages, scripts, transliteration, or local slang in one message. It can clarify that mix in a standard language or deliberately produce a supported everyday mix such as Hinglish, Spanglish, Taglish, or Arabizi."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can Mixingo translate English into Hinglish or Spanglish?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. A standard language can be the source and a supported hybrid style can be the target. Mixingo is designed to generate the selected mix, script, tone, and everyday register instead of returning only a standard-language translation."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can Mixingo translate hybrid language back or into another mix?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Supported directions include hybrid-to-standard and selected hybrid-to-hybrid workflows, such as Hinglish to English or Hinglish to Spanglish. Private-beta coverage is direction-specific, so not every possible combination is available yet."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Which hybrid languages does Mixingo support?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The private beta focuses on directions involving Hinglish, Spanglish, Taglish, Singlish, Arabizi, and Manglish. Each source, target, and script direction is tested separately, and more combinations are added from real beta usage."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can Mixingo translate PDFs, DOCX, TXT, and ebooks into hybrid language?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Choose a supported standard or hybrid target on the web or API and get a translated file back rather than a plain-text dump. Straightforward files should preserve their structure and layout closely; complex or scanned PDFs use best-effort preservation."
+            }
+          }
+        ]
+      }
+    ]
   }
   </script>
 </head>
@@ -55,7 +182,7 @@
   <div class="noise"></div>
   <div class="cursor-glow"></div>
   <nav class="nav shell">
-    <a class="brand" href="#"><span class="brand-mark"><i></i><i></i><i></i></span>mixingo</a>
+    <a class="brand" href="/"><span class="brand-mark"><i></i><i></i><i></i></span>mixingo</a>
     <div class="nav-links" id="navLinks"><a href="#product">Product</a><a href="compare.html">Compare</a><a
         href="developers.html">Developers</a><a href="#pricing">Pricing</a><a href="about.html">About</a></div>
     <div class="nav-actions"><a class="text-link" href="developers.html">API preview</a><a class="button small"
@@ -71,22 +198,21 @@
     <section class="hero shell">
       <div class="orb orb-one"></div>
       <div class="orb orb-two"></div>
-      <div class="eyebrow reveal"><span></span> Private beta · The translator built for how the internet actually speaks</div>
-      <h1 class="reveal delay-1">Say it your way.<br><em>We'll translate it right.</em>
+      <div class="eyebrow reveal"><span></span> Private beta · Standard and code-mixed translation for text, files &amp; API</div>
+      <h1 class="reveal delay-1">Standard or hybrid.<br><em>Choose how it should sound.</em>
       </h1>
-      <p class="hero-copy reveal delay-2">People write "kal milte hain?" and "¿puedo reschedule?" every day. Every translation tool turns it into something stiff, robotic, and wrong. Mixingo is built for those words — whether you paste them, upload the PDF or document they live in, or ship translation through the API.</p>
-      <div class="hero-actions reveal delay-3"><a class="button primary" href="#waitlist">Get API early access
-          <span>↗</span></a><a class="watch" href="#product"><b>▶</b> See the difference ↓</a></div>
+      <p class="hero-copy reveal delay-2">Mixingo translates standard languages into supported everyday mixes like Hinglish and Spanglish, translates code-mixed language back into standard form, and moves between selected hybrid styles. Use it on text, through the API, or across complete files.</p>
+      <div class="hero-actions reveal delay-3"><a class="button primary" href="#waitlist">Get early access
+          <span>↗</span></a><a class="watch" href="#directions"><b>▶</b> See every direction ↓</a></div>
       <div class="proof reveal delay-3">
         <div class="avatars"><span>हिं</span><span>Es</span><span>ع</span><span>Ta</span></div>
-        <div><strong>Purpose-built for hybrid languages</strong><small>Hinglish, Spanglish, Taglish, Singlish, Arabizi,
-            Manglish & beyond.</small></div>
+        <div><strong>Hybrid language is a target, not just an input</strong><small>Standard to hybrid · hybrid to standard · selected hybrid to hybrid</small></div>
       </div>
     </section>
 
     <section class="demo-wrap shell" id="demo">
       <div class="demo-glow"></div>
-      <div class="demo-status"><span></span> Interactive product preview · Translation is hard-coded for pre-launch
+      <div class="demo-status"><span></span> Illustrative product preview · English to Hinglish · Hard-coded for pre-launch
       </div>
       <div class="translator-card reveal">
         <div class="window-bar">
@@ -95,28 +221,28 @@
         </div>
         <div class="translator">
           <div class="input-panel">
-            <div class="select-row"><button>Auto-detect <span>⌄</span></button><span class="char-count">54 /
+            <div class="select-row"><button>English <span>⌄</span></button><span class="char-count">54 /
                 1,000</span></div>
             <textarea id="source" maxlength="1000" spellcheck="false" readonly
-              aria-label="Demo source text">Yaar kal ka meeting reschedule kardo, I won't be free.</textarea>
+              aria-label="Demo source text">Please reschedule tomorrow's meeting. I won't be free.</textarea>
             <div class="input-foot"><span class="demo-lock">⌁ Demo input locked</span><button class="icon-btn"
                 aria-label="Listen to demo" disabled>◖))</button></div>
           </div>
           <button class="swap" aria-label="Language direction shown for demo" disabled>⇄</button>
           <div class="output-panel">
-            <div class="select-row"><button>Natural English <span>⌄</span></button><span class="detected"><i></i> Hindi
-                + English detected</span></div>
-            <div class="result" id="result">Hey, please reschedule tomorrow’s meeting. I won’t be available.</div>
+            <div class="select-row"><button>Natural Hinglish <span>⌄</span></button><span class="detected"><i></i> English source
+                · Hinglish target</span></div>
+            <div class="result" id="result">Yaar, kal ki meeting reschedule kar do. Main free nahi hoon.</div>
             <div class="output-foot"><span><i class="spark">✦</i> Tone preserved</span>
               <div><button class="icon-btn">◖))</button><button class="icon-btn" id="copy">▢</button></div>
             </div>
           </div>
         </div>
-        <div class="demo-footer"><span><i></i> Mixingo understood <b>Yaar</b> as casual address, not a literal
-            word.</span><a href="#waitlist" class="demo-join">Join beta <span>↗</span></a></div>
+        <div class="demo-footer"><span><i></i> Mixingo expressed standard English in an everyday <b>Hinglish</b>
+            register — not textbook Hindi.</span><a href="#waitlist" class="demo-join">Join beta <span>↗</span></a></div>
       </div>
       <div class="floating-note note-one"><span>✦</span>
-        <div><b>Code-mix aware</b><small>Understands 2+ languages in one sentence</small></div>
+        <div><b>Hybrid output controls</b><small>Choose the target mix, script &amp; register</small></div>
       </div>
       <div class="floating-note note-two"><span>☺</span>
         <div><b>Sounds like you</b><small>Keeps context, slang & tone intact</small></div>
@@ -132,10 +258,10 @@
     <section class="problem shell" id="product">
       <div class="section-label">01 — THE PROBLEM</div>
       <div class="problem-grid">
-        <h2>Two billion people mix languages every day.<br><span>Every translator acts like they don't.</span></h2>
+        <h2>Code-mixed language isn't just messy input.<br><span>Only standard output matters.</span></h2>
         <div>
-          <p>Think about the last time you typed in two languages at once. You didn't stop to think about it — it just came out that way. Now paste that sentence into Google Translate. It comes back wrong. Stiff. Like it was written by someone who learned the language from a dictionary, not from life.</p>
-          <p class="muted">That's the gap Mixingo fills.<br><strong>We translate the way you actually write — not the way translators wish you did.</strong></p>
+          <p>Broad translators can process some mixed-language text. But their public language menus and APIs are primarily organized around standard languages and regional variants. Mixingo makes the missing choice explicit: ask for standard output, a supported hybrid style, or another selected mix.</p>
+          <p class="muted">Understanding how people speak is only half the job.<br><strong>Mixingo also translates into the language people use in chats, communities, classrooms, and everyday life.</strong></p>
         </div>
       </div>
       <div class="compare-grid">
@@ -143,38 +269,38 @@
           <div class="compare-head"><span>Generic translator</span><i>Literal</i></div>
           <p class="prompt">“Bro, scene kya hai tonight?”</p>
           <div class="bad-output"><span>×</span>
-            <p>“Brother, what is the scene tonight?”<small>Technically translated. Practically weird.</small></p>
+            <p>“Brother, what is the scene tonight?”<small>One hybrid to standard result. Technically translated; socially awkward.</small></p>
           </div>
         </article>
         <article class="compare new">
-          <div class="compare-head"><span><b>✦</b> Mixingo</span><i>Natural</i></div>
-          <p class="prompt">“Bro, scene kya hai tonight?”</p>
+          <div class="compare-head"><span><b>✦</b> Mixingo</span><i>Hinglish target</i></div>
+          <p class="prompt">“What’s the plan for tonight?”</p>
           <div class="good-output"><span>✓</span>
-            <p>“Hey, what’s the plan for tonight?”<small>Meaning, context and vibe — preserved.</small></p>
+            <p>“Bro, aaj raat ka kya scene hai?”<small>Standard to hybrid, with the target register chosen on purpose.</small></p>
           </div>
         </article>
       </div>
       <div class="pain-grid">
         <article><span>01</span>
-          <h3>Support tickets lose the real meaning</h3>
-          <p>When someone writes "yaar urgent hai please dekho," they're panicking. A bad translation strips that out. Your support team reads "friend urgent please check" and doesn't escalate. That's a churn event.</p>
+          <h3>Understanding is only half the job</h3>
+          <p>When someone writes "yaar urgent hai please dekho," a support team may need clear standard English. Mixingo translates the mix without flattening the urgency, relationship, or intent.</p>
         </article>
         <article><span>02</span>
-          <h3>Mixed language breaks every chat tool</h3>
-          <p>Language detection tells you which language someone used. It doesn't tell you what they meant. Context is everything. Detection alone gives you nothing.</p>
+          <h3>Output should sound like the audience</h3>
+          <p>Sometimes standard language is the source, not the destination. Turn product copy, lessons, or community posts into a supported everyday mix instead of stiff textbook phrasing.</p>
         </article>
         <article><span>03</span>
-          <h3>Developers need something that ships</h3>
-          <p>Not a prompt you have to maintain. Not a translation model you have to fine-tune. One API call that returns predictable JSON, handles script switching, and doesn't break when your user types the way they actually think.</p>
+          <h3>Developers need the direction to be explicit</h3>
+          <p>Choose a standard or hybrid target through one API. Get predictable text or file output, script and mix metadata, and a workflow built around translation rather than prompt maintenance.</p>
         </article>
       </div>
     </section>
 
-    <section class="features shell">
+    <section class="features shell" id="directions">
       <div class="section-label">02 — WHY MIXINGO</div>
       <div class="section-title">
-        <h2>Built for the sentence<br><em>Google translates wrong.</em></h2>
-        <p>Translation designed for mixed-language, informal, human text — the kind that breaks every other tool.</p>
+        <h2>Not just understanding the mix.<br><em>Generating it on purpose.</em></h2>
+        <p>Translate hybrid to standard, standard to hybrid, or between selected hybrid styles — while keeping meaning, script, tone, and social register clear.</p>
       </div>
       <div class="feature-grid">
         <article class="feature feature-large">
@@ -182,43 +308,42 @@
             <span>Hola</span><span>नमस्ते</span><span>Hello</span><span>مرحبا</span><span>Salut</span>
             <div>✦</div>
           </div><span class="num">01</span>
-          <h3>Understands hybrid pairs</h3>
-          <p>Hinglish, Spanglish, Taglish, Singlish, Arabizi and regional mixes are treated as first-class inputs, not
-            edge cases.</p>
+          <h3>Hybrid styles are sources and targets</h3>
+          <p>Hinglish, Spanglish, Taglish, Singlish, Arabizi, Manglish, and supported regional mixes can be the language you start with — or the language you want back.</p>
         </article>
         <article class="feature">
           <div class="feature-visual tone">
             <div class="wave">▂▅▃▇▂▆▃▅▂</div><span>CASUAL</span><span>FRIENDLY</span><span>YOU</span>
           </div><span class="num">02</span>
-          <h3>Keeps it human</h3>
-          <p>"Arey yaar chillax kar" shouldn't come back as "Oh friend please relax." It should come back as "Relax, man." Mixingo preserves how something was said, not just what it said.</p>
+          <h3>Makes standard language feel everyday</h3>
+          <p>"Please relax, everything will be fine" can become "Arey yaar, chill — sab theek ho jayega" when natural Hinglish is the target. The mix is generated deliberately, not added as decoration.</p>
         </article>
         <article class="feature">
           <div class="feature-visual script">
-            <div>mera dil<br><span>मेरा दिल</span><br><b>my heart</b></div>
+            <div>my heart<br><span>mera dil</span><br><b>मेरा दिल</b></div>
           </div><span class="num">03</span>
-          <h3>Detects scripts and transliteration</h3>
-          <p>Romanized words, native scripts, informal spelling and mid-sentence switches are part of the input model.
+          <h3>Controls script, mix, and transliteration</h3>
+          <p>Move between standard and hybrid language in Roman or native scripts. Informal spelling and mid-sentence switching can be understood on input and requested on output.
           </p>
         </article>
         <article class="feature feature-wide" id="developers">
           <div><span class="num">04</span>
             <h3>One API, every workflow.</h3>
-            <p>Predictable JSON for text. Complete translated files for PDF, TXT, DOCX, and ebook inputs. Streaming for live chat, layout-aware document output, script detection, and account-level usage controls — all through full API access.</p><a href="developers.html">Explore docs preview
+            <p>Choose a standard or supported hybrid target for text, PDF, TXT, DOCX, and ebook inputs. The full-access API returns predictable output plus source-mix, script, tone, and requested-target metadata.</p><a href="developers.html#translation-directions">Explore direction &amp; API preview
               <span>↗</span></a>
           </div>
           <pre><code><span>const</span> text = <span>await</span> mixingo.translate({
-  text: <i>"bhai kal urgent hai"</i>,
-  target: <i>"en"</i>
+  text: <i>"Please relax, everything will be fine."</i>,
+  target: <i>"hinglish"</i>
 });
 
 <span>const</span> file = <span>await</span> mixingo.translateFile({
   file: documentFile, <span class="comment">// PDF · TXT · DOCX · ebook</span>
-  target: <i>"en"</i>,
+  target: <i>"spanglish"</i>,
   preserveLayout: <span>true</span>
 });
 
-<span class="comment">// Full API access: text in, files in, natural output out.</span></code></pre>
+<span class="comment">// Standard to hybrid · hybrid to standard · hybrid to hybrid</span></code></pre>
         </article>
       </div>
     </section>
@@ -227,16 +352,16 @@
       <div class="document-feature">
         <div class="document-copy">
           <span class="document-eyebrow"><i></i> SUPPORTED IN PRIVATE BETA</span>
-          <h2>Same file.<br><em>New language.</em></h2>
-          <p class="document-lead">Upload or send a PDF, TXT, DOCX, or ebook through the web translator or API and get back a translated file — not a plain-text dump. Mixingo is built to keep the original structure, spacing, images, typography, and layout as close to the source as possible.</p>
+          <h2>Same file.<br><em>Now in their language.</em></h2>
+          <p class="document-lead">Upload or send a PDF, TXT, DOCX, or ebook and choose how it should sound. Turn a standard-language book into everyday Hinglish, Spanglish, or another supported mix; translate a hybrid document back to standard language; or move between selected mixes. Mixingo returns a translated file — not a plain-text dump — with the original layout preserved as closely as possible.</p>
           <ul class="document-formats" aria-label="Supported file types">
             <li>PDF</li><li>TXT</li><li>DOCX</li><li>EBOOKS</li>
           </ul>
           <div class="document-fidelity">
             <article>
               <span>01</span>
-              <div><h3>Everyday files, near-original</h3>
-                <p>For straightforward TXT, DOCX, ebook, and text-led PDF files, fidelity should be near-original. In most cases, only the words change.</p>
+              <div><h3>The words change. The document stays.</h3>
+                <p>For straightforward files, structure, images, spacing, and typography should remain near-original while the text moves into the standard or hybrid target you chose.</p>
               </div>
             </article>
             <article>
@@ -246,7 +371,7 @@
               </div>
             </article>
           </div>
-          <a class="document-link" href="#waitlist">Get document translation access <span>↗</span></a>
+          <a class="document-link" href="#waitlist">Translate complete files your way <span>↗</span></a>
         </div>
         <div class="document-visual" aria-hidden="true">
           <span class="document-orbit orbit-one">TXT</span>
@@ -258,7 +383,7 @@
               <div class="sheet-head"><span>PDF</span><small>LAYOUT-AWARE</small></div>
               <div class="sheet-image"><i></i><b></b></div>
               <div class="sheet-lines"><i></i><i></i><i></i><i></i></div>
-              <div class="sheet-status"><span>EN</span><b>→</b><span>ES</span><em>✓</em></div>
+              <div class="sheet-status"><span>EN</span><b>TO</b><span>HINGLISH</span><em>✓</em></div>
             </div>
           </div>
         </div>
@@ -269,10 +394,8 @@
       <div class="section-label">03 — HONEST COMPARISON</div>
       <div class="compare-intro">
         <div>
-          <h2>Google is great.<br><em>For Hinglish at 2am? Not so much.</em></h2>
-          <p>Google, DeepL and Azure are broad, powerful translation platforms. Mixingo is being built for a narrower
-            problem they do not explicitly position around: naturally interpreting code-mixed, transliterated, informal
-            text.</p>
+          <h2>Broad translators cover languages.<br><em>Mixingo makes the mix a target.</em></h2>
+          <p>Google, DeepL, and Azure offer far broader language and platform coverage and may handle some mixed input. Their cited public language lists are organized around standard languages and regional variants. Mixingo's narrower focus is explicit standard to hybrid, hybrid to standard, and selected hybrid to hybrid translation.</p>
         </div><a class="text-arrow" href="compare.html">See the full comparison <span>↗</span></a>
       </div>
       <div class="comparison-table" role="region" aria-label="Translation product comparison" tabindex="0">
@@ -288,72 +411,77 @@
           </thead>
           <tbody>
             <tr>
-              <td>Code-mixed input focus</td>
-              <td class="mixingo-col"><b>Core purpose</b></td>
-              <td>Not positioned for it</td>
-              <td>Not positioned for it</td>
-              <td>Not positioned for it</td>
+              <td>Code-mixed to standard</td>
+              <td class="mixingo-col"><b>Core direction</b></td>
+              <td>May work; test the pair*</td>
+              <td>Not a named workflow*</td>
+              <td>Not a named workflow*</td>
             </tr>
             <tr>
-              <td>Informal tone & slang</td>
-              <td class="mixingo-col"><b>Designed around it</b></td>
-              <td>General translation</td>
+              <td>Standard to code-mixed</td>
+              <td class="mixingo-col"><b>Core differentiator</b></td>
+              <td>Not listed as a named target*</td>
+              <td>Not listed as a named target*</td>
+              <td>Not listed as a named target*</td>
+            </tr>
+            <tr>
+              <td>Code-mixed to code-mixed</td>
+              <td class="mixingo-col"><b>Selected beta pairs</b></td>
+              <td>Not listed as a named workflow*</td>
+              <td>Not listed as a named workflow*</td>
+              <td>Not listed as a named workflow*</td>
+            </tr>
+            <tr>
+              <td>Hybrid target controls</td>
+              <td class="mixingo-col"><b>Mix, script &amp; register</b></td>
+              <td>Standard language controls*</td>
               <td>Style controls*</td>
               <td>Custom models*</td>
             </tr>
             <tr>
-              <td>Text translation</td>
-              <td class="mixingo-col">Focused</td>
-              <td>Broad suite</td>
-              <td>Broad suite</td>
-              <td>Broad suite</td>
-            </tr>
-            <tr>
               <td>PDF, DOCX, TXT &amp; ebook translation</td>
-              <td class="mixingo-col"><b>Web + API</b></td>
-              <td><b>Strong</b></td>
-              <td><b>Strong</b></td>
-              <td><b>Strong</b></td>
+              <td class="mixingo-col"><b>Web + API · hybrid targets</b></td>
+              <td><b>Strong document suite</b></td>
+              <td><b>Document support</b></td>
+              <td><b>Document services</b></td>
             </tr>
           </tbody>
         </table>
       </div>
-      <p class="comparison-note">*Competitor capabilities vary by language, plan and API. Comparison reflects public
-        product positioning, not a claim that competitors can never process mixed input. Document-layout fidelity varies
-        with file complexity across products. <a href="compare.html#sources">View methodology & sources →</a></p>
+      <p class="comparison-note">*“Not listed” describes the cited public language documentation — not a claim that another model can never produce mixed text. General systems and niche generators may handle some directions. Mixingo's distinction is making supported hybrid source and target workflows explicit across text, files, web, and API. <a href="compare.html#sources">View methodology &amp; sources →</a></p>
     </section>
 
     <section class="live-compare shell">
-      <div class="section-label">SAME SENTENCE · FOUR TOOLS</div>
-      <h2>See the difference yourself.</h2>
-      <p>We took a real Hinglish sentence and ran it through Google Translate, DeepL, ChatGPT, and Mixingo. Here's what came back.</p>
+      <div class="section-label">THREE DIRECTIONS · ONE PRODUCT</div>
+      <h2>Not just “understood.” Translated your way.</h2>
+      <p>Choose whether the result should be standard, a supported everyday mix, or another selected hybrid style.</p>
       <div class="live-compare-sentence">
-        <small>INPUT (HINGLISH)</small>
-        "bhai kal urgent meeting hai, boss ne bola ASAP reply karo nahi toh problem hoga"
+        <small>ONE MEANING · MULTIPLE DIRECTIONS</small>
+        “Can we meet for coffee tomorrow? I need to tell you something important.”
       </div>
       <div class="tool-outputs">
-        <div class="tool-output">
-          <div class="tool-output-name">GOOGLE TRANSLATE <span class="accuracy-tag partial-tag">PARTIAL</span></div>
-          <p>"Brother, there is an urgent meeting tomorrow, the boss said reply ASAP otherwise there will be a problem"</p>
-          <small>Literal. "Brother" misses the casual register. Sounds robotic.</small>
+        <div class="tool-output mixingo-output">
+          <div class="tool-output-name">ENGLISH to HINGLISH <span class="accuracy-tag">HYBRID TARGET</span></div>
+          <p>“Kal coffee pe mil sakte hain? Mujhe tumhe kuch important batana hai.”</p>
+          <small>Standard language becomes an everyday Hindi-English mix.</small>
         </div>
         <div class="tool-output">
-          <div class="tool-output-name">DEEPL <span class="accuracy-tag miss-tag">MISS</span></div>
-          <p>"Brother there is an urgent meeting tomorrow, the boss said reply ASAP or there will be a problem"</p>
-          <small>Nearly identical to Google. No tone awareness. DeepL has limited Hindi support.</small>
+          <div class="tool-output-name">HINGLISH to ENGLISH <span class="accuracy-tag partial-tag">STANDARD TARGET</span></div>
+          <p>“Can we meet for coffee tomorrow? I need to tell you something important.”</p>
+          <small>From: “Kal coffee pe mil sakte hain? Mujhe tumhe kuch important batana hai.”</small>
         </div>
         <div class="tool-output">
-          <div class="tool-output-name">CHATGPT (GPT-4) <span class="accuracy-tag partial-tag">PARTIAL</span></div>
-          <p>"Hey, there's an urgent meeting tomorrow. The boss wants you to reply ASAP, or there'll be trouble."</p>
-          <small>Better tone but requires prompt engineering. Inconsistent across sessions.</small>
+          <div class="tool-output-name">ENGLISH to SPANGLISH <span class="accuracy-tag partial-tag">HYBRID TARGET</span></div>
+          <p>“¿Nos vemos for coffee mañana? Tengo something important que contarte.”</p>
+          <small>Standard language becomes a selected Spanish-English mix.</small>
         </div>
         <div class="tool-output mixingo-output">
-          <div class="tool-output-name">✦ MIXINGO <span class="accuracy-tag">NATURAL</span></div>
-          <p>"Dude, urgent meeting tomorrow — boss says reply ASAP or it's gonna be a problem."</p>
-          <small>Preserves casual register. "bhai" → "dude" (not "brother"). Tone: urgent + informal.</small>
+          <div class="tool-output-name">HINGLISH to SPANGLISH <span class="accuracy-tag">HYBRID to HYBRID</span></div>
+          <p>“¿Nos vemos for coffee mañana? Tengo something important que contarte.”</p>
+          <small>The meaning moves from one selected hybrid style into another.</small>
         </div>
       </div>
-      <p class="live-compare-note">Test conducted June 2026. Results may vary. Mixingo output shown is from pre-launch model. <a href="compare.html#sources">Full methodology →</a></p>
+      <p class="live-compare-note">Illustrative private-beta examples, not an independent benchmark. Code-mixing varies by region, community, and speaker; final output may vary. <a href="compare.html#sources">Read the comparison methodology →</a></p>
     </section>
 
     <section class="social-proof shell">
@@ -393,7 +521,7 @@
       <div class="plans">
         <article><span class="plan-name">CURIOUS</span>
           <h3>Free</h3>
-          <p>Try it on your messiest sentence. No account needed to start.</p><a class="plan-button" href="#demo">Start
+          <p>Try standard to hybrid or hybrid to standard translation. No account needed to start.</p><a class="plan-button" href="#demo">Start
             translating</a>
           <ul>
             <li>✓ 250K characters / month</li>
@@ -405,7 +533,7 @@
         <article class="popular">
           <div class="popular-tag">RECOMMENDED</div><span class="plan-name">BUILDER</span>
           <h3><sup>$</sup>3.99<small>/ month</small></h3>
-          <p>For developers and creators shipping products for multilingual users.</p><a class="plan-button filled" href="#">Go Builder
+          <p>For developers and creators shipping products for multilingual users.</p><a class="plan-button filled" href="#waitlist">Go Builder
             <span>↗</span></a>
           <ul>
             <li>✓ 1M characters / month</li>
@@ -436,34 +564,40 @@
       </div>
       <div class="accordion">
         <details open>
-          <summary>Why not just use GPT-4 with a prompt?<span>+</span></summary>
-          <p>You can. A lot of developers start there. But you'll spend time maintaining that prompt, debugging edge cases, handling script detection yourself, and paying frontier model prices for every translation call. Mixingo is a purpose-built endpoint — cheaper per call, no prompt maintenance, structured output every time.</p>
+          <summary>What makes Mixingo different from broad translators?<span>+</span></summary>
+          <p>Broad translators cover far more standard languages and may handle some mixed-language text. Mixingo is purpose-built to make supported code-mixed styles explicit source and target choices across text and files: standard to hybrid, hybrid to standard, and selected hybrid to hybrid.</p>
         </details>
         <details>
-          <summary>What exactly is code-mixed text?<span>+</span></summary>
-          <p>It's how multilingual people naturally communicate — switching between languages, scripts, and slang within
-            the same sentence. Think Hinglish, Spanglish, Arabizi, Taglish, and countless everyday combinations.</p>
+          <summary>What is code-mixed translation?<span>+</span></summary>
+          <p>Code-mixed translation handles language that combines two or more languages, scripts, transliteration, or local slang in one message. It can clarify that mix in a standard language or deliberately produce a supported everyday mix such as Hinglish, Spanglish, Taglish, or Arabizi.</p>
+        </details>
+        <details>
+          <summary>Can Mixingo translate English into Hinglish or Spanglish?<span>+</span></summary>
+          <p>Yes. A standard language can be the source and a supported hybrid style can be the target. Mixingo is designed to generate the selected mix, script, tone, and everyday register instead of returning only a standard-language translation.</p>
+        </details>
+        <details>
+          <summary>Can Mixingo translate hybrid language back — or into another mix?<span>+</span></summary>
+          <p>Yes. Supported directions include hybrid to standard and selected hybrid to hybrid workflows, such as Hinglish to English or Hinglish to Spanglish. Private-beta coverage is direction-specific, so not every possible combination is available yet.</p>
         </details>
         <details>
           <summary>Can I use Mixingo without signing up?<span>+</span></summary>
-          <p>Yes. Anonymous visitors can translate up to 1,000 characters at a time, with no account or credit card
-            needed.</p>
+          <p>Yes. Anonymous visitors can translate up to 1,000 characters at a time, with no account or credit card needed.</p>
         </details>
         <details>
-          <summary>Which languages does Mixingo support?<span>+</span></summary>
-          <p>Hinglish, Spanglish, Taglish, Singlish, Arabizi, and Manglish are fully supported at launch. More pairs are added based on what beta users actually send — not what we assume they'll need.</p>
+          <summary>Which hybrid languages does Mixingo support?<span>+</span></summary>
+          <p>The private beta focuses on directions involving Hinglish, Spanglish, Taglish, Singlish, Arabizi, and Manglish. Each source, target, and script direction is tested separately, and more combinations are added from real beta usage.</p>
         </details>
         <details>
-          <summary>What does the API actually return?<span>+</span></summary>
-          <p>A JSON response with the translated text, detected language mix, script type, and tone classification. Streaming available for live chat use cases. See the <a href="developers.html">developer page</a> for the full schema preview.</p>
+          <summary>What does the API return?<span>+</span></summary>
+          <p>Text calls return translated output plus source-mix, script, tone, and requested-target metadata. File calls return the translated document with processing metadata. See the <a href="developers.html#translation-directions">API and translation-direction preview</a>.</p>
         </details>
         <details>
           <summary>Does web and API usage share the same limit?<span>+</span></summary>
-          <p>Yes. Signed-in accounts use one clear, unified character allowance across both web and API translation.</p>
+          <p>Yes. Signed-in accounts use one clear, unified allowance across both web and API translation.</p>
         </details>
         <details>
-          <summary>Which files can Mixingo translate?<span>+</span></summary>
-          <p>PDF, TXT, DOCX, and ebook files are supported across both the private-beta web translator and API, so API users get the same complete file-translation access as web users. Our goal is to return the same file with its text translated while preserving the original formatting, images, spacing, and layout. Straightforward files should be near-original — in most cases, only the words change. Highly designed PDFs with dense columns, overlapping layers, scanned pages, text baked into images, unusual fonts, or many visual elements can be less consistent; some image text may remain unchanged, so we preserve as much as possible rather than promise pixel-perfect output for every file.</p>
+          <summary>Can Mixingo translate PDFs, DOCX, TXT, and ebooks into hybrid language?<span>+</span></summary>
+          <p>Yes. Choose a supported standard or hybrid target on the web or API and get a translated file back — not a plain-text dump. Straightforward files should keep their structure, images, spacing, and typography while only the words change. Complex or scanned PDFs may be less consistent, and some image text may remain unchanged, so layout preservation is best-effort rather than guaranteed pixel-perfect.</p>
         </details>
       </div>
     </section>
@@ -471,8 +605,8 @@
     <section class="waitlist shell" id="waitlist">
       <div class="waitlist-copy">
         <div class="section-label">06 — PRIVATE BETA</div>
-        <h2>2 billion people mix languages daily.<br><em>No translator was built for them. Until now.</em></h2>
-        <p>Join the founding waitlist — this is the only time these terms exist.
+        <h2>People already speak in the mix.<br><em>Now translation can answer in it.</em></h2>
+        <p>Join the founding waitlist and help test the directions, scripts, and hybrid styles that matter in real life.
         </p>
         <ul>
           <li><span>—</span> You get in before anyone else</li>
@@ -503,16 +637,16 @@
     <section class="final-cta">
       <div class="cta-orb"></div>
       <div class="shell"><span class="mini-mark">✦</span>
-        <h2>Say it your way.<br><em>We'll understand.</em></h2>
-        <p>It's going to come back wrong on Google. It doesn't have to.</p><a class="button light"
+        <h2>Choose the language.<br><em>Choose the mix.</em></h2>
+        <p>Standard to hybrid. Hybrid to standard. Selected mix to mix.</p><a class="button light"
           href="#waitlist">Join the Mixingo beta <span>↗</span></a><small>Private beta · Founding access · Built with
           early users</small>
       </div>
     </section>
   </main>
-  <footer class="footer shell"><a class="brand" href="#"><span
+  <footer class="footer shell"><a class="brand" href="/"><span
         class="brand-mark"><i></i><i></i><i></i></span>mixingo</a>
-    <p>Code-mixed translation for the multilingual internet.</p>
+    <p>Standard and code-mixed translation for text, files, web, and API.</p>
     <div><a href="about.html">About</a><a href="compare.html">Compare</a><a href="developers.html">Developers</a><a
         href="privacy.html">Privacy</a><a href="mailto:hello@mixingo.dev">Contact</a></div>
     <div class="socials"><a aria-label="Mixingo on X" href="https://x.com/mixingoapp">𝕏</a><a

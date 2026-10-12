@@ -1,0 +1,21 @@
+# Mixingo
+
+> Mixingo is a private-beta translation product that treats supported code-mixed styles as both sources and targets.
+
+## Core capability
+
+Mixingo supports three direction classes: standard language to a supported hybrid style, hybrid language to a standard target, and selected hybrid-to-hybrid translation. Beta styles include directions involving Hinglish, Spanglish, Taglish, Singlish, Arabizi, and Manglish. Coverage is direction-specific rather than universal.
+
+The same direction model applies to the web translator and full-access API for direct text and supported PDF, DOCX, TXT, and ebook workflows. Straightforward files aim to preserve layout while changing the text; complex or scanned PDFs use best-effort preservation.
+
+## Canonical pages
+
+- [Product and FAQ](https://www.mixingo.dev/)
+- [Sourced competitor comparison](https://www.mixingo.dev/compare.html)
+- [Developer and API preview](https://www.mixingo.dev/developers.html)
+- [Company mission](https://www.mixingo.dev/about.html)
+- [Privacy and data handling](https://www.mixingo.dev/privacy.html)
+
+## Important qualification
+
+Broad translation products and general AI systems may process or generate some mixed-language text. Mixingo's claimed differentiation is its explicit, integrated product scope across named hybrid source and target directions, text and complete files, web and API—not that no other tool can ever produce Hinglish, Spanglish, or another mix.
